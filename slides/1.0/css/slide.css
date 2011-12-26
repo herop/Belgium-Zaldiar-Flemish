@@ -1,0 +1,27 @@
+#slide-1_0{
+
+}
+
+#slide-1_0 .paracetamol{
+    background: url('../img/paracetamol.png') no-repeat;
+    width:381px;
+    height:317px;
+    margin-top: 320px;
+    margin-left: 270px;
+}
+
+#slide-1_0 .zaldiar{
+    position: absolute;
+    background: url('../img/zaldiar.png');
+    width:482px;
+    height:398px;
+    left:110px;
+    top:390px;
+    z-index: 1;
+    opacity:0;
+}
+
+#slide-1_0 .zaldiar.active{
+    opacity: 1;
+    -webkit-transition: opacity 1s linear;
+}

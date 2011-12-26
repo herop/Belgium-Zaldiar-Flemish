@@ -4,7 +4,7 @@ presentation { position: absolute; display: none; float: left; width: 768px; hei
 chapter { display: none; float: left; width: 768px; height: 1024px; }
 scroll { float: left; width: auto; height: inherit; white-space: nowrap; }
 scroll[y] { float: left; width: inherit; height: auto; white-space: nowrap; }
-slide { display: block; float: left; width: 768px; height: 1024px; overflow: hidden; -webkit-transform: translate3d(0px,0px,0px); }
+slide { display: block; float: left; width: 768px; height: 1024px; overflow: hidden; -webkit-transform: translate3d(0px,0px,0px); white-space:normal}
 
 slide.hide { display: none; }
 presentation.show, chapter.show { display: block; }

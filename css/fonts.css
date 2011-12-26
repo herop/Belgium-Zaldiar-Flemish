@@ -4,4 +4,5 @@
 @font-face { font-family: Frutiger; src: url('../fonts/FrutigerLTStd-Bold.ttf') format('truetype'); font-weight:bold}
 @font-face { font-family: Eurostile-Cn; src: url('../fonts/Eurostile-Cn.ttf') format('truetype'); }
 @font-face { font-family: Eurostile; src: url('../fonts/Eurostile_Bold.ttf') format('truetype'); font-weight:bold}
-@font-face { font-family: Gill Sans; src: url('../fonts/GillSans_Regular.ttf') format('truetype');}
+@font-face { font-family: Gill Sans; src: url('../fonts/GillSans_Regular.ttf') format('truetype'); font-weight:normal}
+@font-face { font-family: Gill Sans; src: url('../fonts/GillSans_Bold.ttf') format('truetype'); font-weight:bold}

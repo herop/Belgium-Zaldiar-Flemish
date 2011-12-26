@@ -2,6 +2,7 @@
 #down footer bar { background-position: 0px -76px; }
 #left footer bar { background-position: 0px -114px; }
 #right footer bar { background-position: 0px -38px; }
-#up slide, #down slide, #left slide, #right slide { background: white; }
+#up slide, #down slide, #left slide, #right slide { background: white; }#up slide, #down slide, #left slide, #right slide { background: white; }
 h1 { margin: 40px 70px; font-family: 'Eurostile'; font-weight: bold; font-size: 30px; color: #ed7403; }
 h2 { font-family: 'Frutiger'; font-weight: normal; font-size: 22px; color: black; }
+sup {font-size: 50%;}

@@ -388,6 +388,7 @@
 		var that = this;
 			
 		that.items.forEach(function(item, i){
+			console.log($.getHTMLElements(item[0])[0])
 			if(parent($.getHTMLElements(item[0])[0]) === slide.element){//check for slide tweens
 				var tweener;
 				tweener = new Tweener(item[0],item[1]);
@@ -493,9 +494,9 @@
 		})
 		
 		result = [];
-		max = max_array.max();
+		maxVal = arrayMax(max_array);
 			
-		that.adjust(position, max);
+		that.adjust(position, maxVal);
 		position.length = position.x.length;
 			
 		return position;
@@ -512,13 +513,13 @@
 		x = x || 0; y = y || 0; z = z || 0;
 		result = []
 		position = that.compound(x,y,z)
-		max = [
+		max = arrayMax([
 			position.x.length,
 			position.y.length,
 			position.z.length
-		].max();
+		]);
 		that.transform = that.fill(that.transform, max);
-		max = [max, that.transform.length].max()
+		max = arrayMax([max, that.transform.length])
 		for(i; i < max; i++){
 			var X, Y, Z; 
 			j > position.length ? j = 0 : 0;

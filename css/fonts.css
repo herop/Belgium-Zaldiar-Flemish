@@ -3,3 +3,4 @@
 @font-face { font-family: Frutiger; src: url('../fonts/FrutigerLTStd-Roman.otf') format('truetype'); }
 @font-face { font-family: Frutiger-Bold; src: url('../fonts/FrutigerLTStd-Bold.ttf') format('truetype'); }
 @font-face { font-family: Eurostile-Cn; src: url('../fonts/Eurostile-Cn.ttf') format('truetype'); }
+@font-face { font-family: Eurostile; src: url('../fonts/Eurostile_Bold.ttf') format('truetype'); font-weight:bold}

@@ -1,0 +1,10 @@
+menu { display: block; position: absolute; float: left; width: inherit; height: 50px; overflow: hidden; }
+menu scroll > li { display: -webkit-box; float: left; width: auto; height: inherit; -webkit-box-align: center; -webkit-box-pack: center; padding: 0px 20px; border-left: 1px solid #adadad; width: 137px; }
+menu scroll > li[role="home"] { width: 15px; overflow: hidden; font-size: 0px; background: url('../../img/home.png') no-repeat center 15px; }
+
+/* customization */
+menu { background: url('../../img/menu-background.png') repeat-x; font-size: 22px; color: #666666; }
+menu scroll > li.active { background: #00a651; color: white; }
+menu scroll > li.active[role="home"] { background: url('../../img/home.png') no-repeat center -21px, #00a651; }
+chapter { position: absolute; top: 50px; height: 974px; }
+slide { height: 974px; }

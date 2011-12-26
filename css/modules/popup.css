@@ -1,0 +1,8 @@
+popup { display: block; position: absolute; top: 50%; left: 50%; width: 400px; height: 200px; margin: -102px 0px 0px -202px; border: 2px solid #A76BC3; border-radius: 4px; 
+	-webkit-box-shadow: 0px 0px 13px gray; -webkit-transition: all 400ms ease-out; -webkit-transform: translate3d(-1000px,0px,0px); }
+popup xbutton { display: block; position: absolute; top: 10px; right: 10px; width: 20px; height: 20px; border-radius: 10px; background: #A76BC3; }
+popup xbutton::before, popup xbutton::after { content: ''; display: block; position: absolute; top: 9px; left: 3px; width: 14px; height: 2px; background: white; -webkit-transform-origin: center center; }
+popup xbutton::before { -webkit-transform: rotate(45deg); }
+popup xbutton::after { -webkit-transform: rotate(-45deg); }
+popup item { display: block; float: left; overflow: hidden; width: 400px; height: 200px; }
+popup.show { -webkit-transform: translate3d(0px,0px,0px); }

@@ -1,6 +1,84 @@
-graph{
-	display:block;
+.graph-wrapper{
+	width:604px;
+	border:#ec7404 2px solid;
+	border-radius:20px;
+	margin:0 auto;
+	margin-top:60px;
+	position:relative;
+	padding-top:47px;
+	padding-bottom:66px;
 }
-graph header{
+.graph-wrapper header{
 	position:absolute;
+		top:-7px;
+		left:20px;
+	font-family:Eurostile;
+	font-weight:bold;
+	font-size: 18px;
+	text-transform:uppercase;
+	color:#ec7404;
+	line-height:14px;
+	height:14px;
+	background:white;
+}
+.graph-wrapper header sup{
+	vertical-align: top;
+	line-height: 0;
+	font-size: 50%;
+}
+
+graph{
+	display:-webkit-box;
+	margin:0 auto;
+	position:relative;
+}
+graph scale{
+	font-family:Gill Sans;
+}
+#evenDoeltreffendAlsTramadol{
+	width:338px;
+	height:116px;
+	border-left:2px solid black;
+	border-bottom:2px solid black;
+}
+
+
+.horizontal{
+	position: absolute;
+	height: 20px;
+	left: -11px;
+	right:-9px;
+	bottom:-27px;
+	display:-webkit-box;
+	-webkit-box-pack:justify;
+}
+.horizontal num{
+	width: 20px;
+	display: block;
+	text-align: center;
+	position:relative;
+}
+.horizontal num::before{
+	content:'';
+	display:block;
+	height:5px;
+	width:2px;
+	background-color:black;
+	position:absolute;
+	top:-5px;
+	left:50%;
+	margin-left:-1px;
+}
+
+.vertical{
+	position: absolute;
+	left:-85px;
+	display:-webkit-box;
+	-webkit-box-pack:justify;
+	-webkit-box-orient:vertical;
+}
+#evenDoeltreffendAlsTramadol .vertical num{
+	display: block;
+	text-align: right;
+	position:relative;
 }

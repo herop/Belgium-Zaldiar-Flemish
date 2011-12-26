@@ -12,8 +12,10 @@
 		var that = this, homeChapterIndex;
 		this.scrollElement = document.createElement('scroll');
 		this.presentation.collection.forEach(function (chapter, index) {
-			var li = document.createElement('li');
-			li.innerText = chapter.name;
+			var li = document.createElement('li'),
+				span = document.createElement('span');
+			span.innerText = chapter.name;
+			li.appendChild(span);
 			if (chapter.element.hasAttribute('role')) {
 				li.setAttribute('role', chapter.element.getAttribute('role'));
 				if (chapter.element.getAttribute('role') === 'home') {

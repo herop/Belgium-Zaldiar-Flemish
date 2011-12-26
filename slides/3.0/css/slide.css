@@ -1,0 +1,5 @@
+#slide30 .content {width: 640px; margin: 0 auto; padding: 143px 0 0; background: url("../../../img/zaldiar-logo-small.png") center 27px no-repeat;}
+#slide30 .content h1 {margin: 0; color: #434343;}
+#slide30 .content h1 span {background: url("../img/veilige.png") no-repeat; width: 111px; height: 26px; display: inline-block;}
+#slide30 .content ul {margin: 193px 0 0; list-style: none;}
+#slide30 .content ul li {margin: 0 0 65px 0; padding: 0 0 0 75px; height: 75px; line-height: 75px; background: #fff url("../../../img/check.png") 10px 9px no-repeat; color: #000; font-size: 29px; font-family: Frutiger; border-radius: 8px; -webkit-box-shadow: 0 0 10px #888;}

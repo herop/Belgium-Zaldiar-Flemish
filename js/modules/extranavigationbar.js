@@ -6,7 +6,7 @@
 	ExtraNavigationBar.prototype.onpresentationcreate = function (presentation) {
 		this.presentation = presentation;
 		this.navSlide = new SwipeNavigation(presentation);
-		this.navSlide.clear();
+		this.navSlide.show();
 		this.navSlide.leftSwipe = function () {
 			presentation.selectItem(3);
 		};
@@ -49,6 +49,7 @@
 	function SwipeNavigation(presentation) {
 		var that = this;
 		this.element = document.createElement('nav');
+		this.presentation = presentation;
 		presentation.collection.forEach(function (chapter) {
 			if (chapter.element.getAttribute('role') !== 'home') {
 				that.element.appendChild(document.createElement('li'));	
@@ -73,19 +74,24 @@
 		}, false);
 	}
 	SwipeNavigation.prototype.show = function () {
+		if (this.presentation.currentItemIndex === 0) {
+			this.clear();	
+		} else {
+			this.unclear();
+		}
 		this.element.removeClass('hide');
 	};
 	SwipeNavigation.prototype.hide = function () {
 		this.element.addClass('hide');
 	};
 	SwipeNavigation.prototype.toggle = function () {
-		this.element.toggleClass('hide');
+		this.element.hasClass('hide') ? this.show() : this.hide();
 	};
 	SwipeNavigation.prototype.clear = function () {
 		this.element.addClass('clear');
 	};
 	SwipeNavigation.prototype.unclear = function () {
-		this.element.removeClass('unclear');
+		this.element.removeClass('clear');
 	};
 	new ExtraNavigationBar();
 })(window);

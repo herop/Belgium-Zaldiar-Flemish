@@ -6,7 +6,8 @@
 		slidesFilesQuery: 'slides/%slidename%/index.html',
 		slidesJSQuery: 'slides/%slidename%/js/slide.js',
 		slidesCSSQuery: 'slides/%slidename%/css/slide.css',
-		slidesJSON: 'slides/slides.json'
+		slidesJSON: 'slides/slides.json',
+		slidesBackJSON: 'slides/slides-back.json'
 	};
 	function SlideFactory(max) {
 		this.slides = [];
@@ -128,7 +129,7 @@
 		}
 	};
 	global.project = new ProjectFactory();
-	new ContentFactory(projectConfig.slidesJSON);
+	new ContentFactory(/back/.test(document.location.pathname) ? projectConfig.slidesBackJSON : projectConfig.slidesJSON);
 })(window);
 /* FIX: ugly default scrolling */
 document.ontouchstart = document.ontouchmove = function (e) {

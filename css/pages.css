@@ -5,3 +5,4 @@
 #up slide, #down slide, #left slide, #right slide { background: white; }
 h1 { margin: 40px 70px; font-family: 'Eurostile'; font-weight: bold; font-size: 30px; color: #ed7403; }
 h2 { font-family: 'Frutiger'; font-weight: normal; font-size: 22px; color: black; }
+sup {font-size: 50%;}

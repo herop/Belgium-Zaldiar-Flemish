@@ -1,0 +1,51 @@
+#slide-1_1 h1{
+    font:33px Eurostile;
+    color:#434343;
+    margin-top:65px;
+    margin-left: 70px;
+}
+#slide-1_1 .topBlock{
+    background: url('../img/block-background.png');
+    width:622px;
+    height:220px;
+    margin-top: 60px;
+    margin-left: 70px;
+    -webkit-border-radius: 15px;
+    -webkit-box-shadow:1px 1px 3px 1px #ccc;
+    list-style-type: none;
+    padding-top:20px
+    
+}
+
+#slide-1_1 .topBlock li{
+    font: 30px FrutigerBoldCn;
+    color:#fff;
+    background: url('../img/item.png') no-repeat;
+    padding-left:75px;
+    height:57px;
+    margin-left: 30px;
+    line-height: 57px;
+    padding-bottom:10px;
+
+}
+
+#slide-1_1 .topBlock li:nth-of-type(3){
+    line-height: 77px;
+}
+
+#slide-1_1 p{
+    height: 140px;
+    padding-left:115px;
+    background: url('../img/yellow-arrow.png') no-repeat;
+    font:33px Frutiger;
+    color:#434343;
+    margin-top:205px;
+    line-height: 60px;
+}
+#slide-1_1 div{
+    background-color: #fff;
+    width:75px;
+    height:75px;
+    margin-left:125px;
+    margin-top:25px;
+}

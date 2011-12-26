@@ -1,9 +1,9 @@
 animation.create('#evenDoeltreffendAlsTramadol bar',{
-		properties:{width:'attr'},
-		delay:[0, 800],
-		duration:800,
-		dispatch:'evenDoeltreffendAlsTramadol'}
-		);
+	properties:{width:'attr'},
+	delay:[0, 800],
+	duration:800,
+	dispatch:'evenDoeltreffendAlsTramadol'}
+);
 animation.create('#betereGiTolerantieDanTramadol bar',{
 		properties:{height:'attr'},
 		delay:['click', 200, 200, 200, 200, 200, 200, 200],
@@ -15,6 +15,7 @@ animation.create('#yellow_0 .flyman-block .manFleing',{
 		delay:[100],
 		duration:400,
 		dispatch:'eventManFlied'});
+		
 animation.create('#yellow_0 .flyman-block .manLines',{
 		properties:{opacity:1},
 		delay:[500],

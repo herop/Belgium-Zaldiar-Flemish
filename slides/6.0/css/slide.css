@@ -1,0 +1,9 @@
+.graph-article { display: block; margin: 70px; }
+.graph { font-family: 'Gill Sans'; }
+.graph p {}
+.graph-names { list-style: none; }
+.graph-names li {}
+.graph-bars { list-style: none; }
+.graph-bars li {}
+.graph-legend { list-style: none; }
+.graph-legend li {}

@@ -1,0 +1,10 @@
+#studieGraph { margin: 180px 70px; }
+.graph-linear { width: 545px; height: 249px; border: 1px solid black; border-width: 0px 0px 1px 1px; }
+.graph-grid-y { list-style: none; display: block; height: 250px; width: 15px; margin: 0px 0px 0px -20px; 
+	font-family: Frutiger; font-weight: normal; }
+.graph-grid-y::before { content: attr(name); display: block; position: relative; top: 75px; left: -130px; 
+	-webkit-transform: rotateZ(-90deg); width: 220px; font-size: 14px; }
+.graph-grid-y li { display: block; width: 15px; height: 20px; margin-bottom: 20px; }
+.graph-grid-y li::after { content: ''; display: block; width: 545px; height: 1px; background: black; 
+	position: relative; top: -10px; left: 20px; }
+.graph-grid-y li:last-child::after { background: transparent; }

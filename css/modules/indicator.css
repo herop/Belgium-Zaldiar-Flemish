@@ -1,0 +1,4 @@
+indicator { display: block; position: absolute; top: 0px; left: -2px; }
+indicator > dot { display: block; width: 22px; height: 7px; background: #D4D4D4; float: left; margin: 12px 0px 0px 12px; -webkit-transition: background 400ms ease-out; }
+indicator > dot.active { background: #ED7403; }
+indicator > dot.hide { display: none; }

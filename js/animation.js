@@ -21,7 +21,12 @@ animation.create('#yellow_0 .flyman-block .manLines',{
 		duration:200,
 		waitfor:'eventManFlied'});
 
-		/*
+animation.create('#slide3_2 ul li',{
+	properties:{opacity:1},
+	delay:[400],
+	duration:400
+});
+/*
 animation.create('#slide30 ul li',{
 		properties:{opacity:1},
 		delay:[400, 800, 800],

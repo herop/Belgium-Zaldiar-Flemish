@@ -1,0 +1,159 @@
+num{
+	display:block;
+	position: relative;
+}
+scale{-webkit-box-pack:justify;}
+bar{
+	display:block;
+	position:absolute;
+}
+ul{
+	list-style:none;
+}
+
+
+.bargroup{
+	list-style:none
+}
+.bargroup.row bar{
+	bottom:0;
+}
+.bargroup.row li{
+	float:left
+}
+.bargroup.column bar{
+	left:0;
+}
+
+.legend{
+	position:absolute;
+}
+graph .notice{
+	position:absolute;
+}
+.graph-wrapper, .text-wrapper{
+	width:604px;
+	border:#ec7404 2px solid;
+	border-radius:20px;
+	margin:0 auto;
+	margin-top:60px;
+	position:relative;
+	padding-top:47px;
+	padding-bottom:66px;
+}
+.graph-wrapper header{
+	position:absolute;
+		top:-12px;
+		left:20px;
+	font-family:Eurostile;
+	font-weight:bold;
+	font-size: 18px;
+	text-transform:uppercase;
+	color:#ec7404;
+	background:white;
+	padding: 0 10px;
+}
+.graph-wrapper header sup{
+	vertical-align: top;
+	line-height: 0;
+	font-size: 50%;
+	top: 5px;
+	position: relative;
+}
+
+graph{
+	display:-webkit-box;
+	margin:0 auto;
+	position:relative;
+	-webkit-box-align:end;
+	border-left:2px solid black;
+	border-bottom:2px solid black;
+	font-family:Gill Sans;
+}
+graph scale{
+	font-family:Gill Sans;
+	font-size: 10px;
+}
+
+.vertical{
+	position: absolute;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	top: 0;
+	bottom: 0;
+	text-align:right;
+}
+.vertical label{
+	display: block;
+	-webkit-transform: rotate(-90deg);
+	position: absolute;
+	top: 0;
+	-webkit-transform-origin: 100% 0%;
+	text-align: center;
+}
+.vertical.stroke num::before{
+	content:'';
+	display:block;
+	height:2px;
+	width:5px;
+	background-color:black;
+	position:absolute;
+	top:50%;
+	right:-5px;
+	margin-top:-1px;
+}
+
+.markers{
+	width:100%;
+	height:100%;
+	position:absolute;
+		top:0;
+		left:0;
+	color:#F29400;
+	font-family:inherit;
+	font-weight:bold;
+	font-size: 12px;
+}
+.markers span{
+	text-align:center;
+	position:absolute;
+}
+.markers span:nth-child(1){
+	top: -13px;
+	left: 19px;
+}
+.markers span:nth-child(2){
+	top:147px;
+	left:137px;
+}
+.markers span:nth-child(3){
+	top:127px;
+	left:251px;
+}
+.horizontal{
+	position: absolute;
+	height: 20px;
+	left: -11px;
+	right:-9px;
+	bottom:-27px;
+	display:-webkit-box;
+}
+.horizontal num{
+	width: 20px;
+	display: block;
+	text-align: center;
+	position:relative;
+}
+p.resume{
+	margin: 0 60px;
+	margin-top: 80px;
+	background: #EC7404;
+	border-radius: 10px;
+	padding: 13px 35px;
+	color: white;
+	font-family: Eurostile;
+	font-weight: bold;
+	text-align: center;
+	font-size: 22px;
+	-webkit-box-shadow: rgba(0,0,0,0.25) 5px 5px 10px;
+}

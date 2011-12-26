@@ -2,8 +2,10 @@
 @font-face { font-family: HelveticaNarrow-Bold; src: url('../fonts/HelveticaNarrow-Bold.ttf') format('truetype'); }
 @font-face { font-family: Frutiger; src: url('../fonts/FrutigerLTStd-Roman.otf') format('truetype'); font-weight: normal; }
 @font-face { font-family: Frutiger; src: url('../fonts/FrutigerLTStd-Bold.ttf') format('truetype'); font-weight:bold}
+@font-face { font-family: FrutigerBoldCn; src: url('../fonts/Frutiger-Bold-Condensed.ttf') format('truetype'); font-weight:bold}
 @font-face { font-family: Eurostile-Cn; src: url('../fonts/Eurostile-Cn.ttf') format('truetype'); }
 @font-face { font-family: Eurostile; src: url('../fonts/Eurostile_Bold.ttf') format('truetype'); font-weight:bold}
 @font-face { font-family: EurostileDemiOblique; src: url('../fonts/Eurostile_Demi_Oblique.ttf') format('truetype'); font-weight:bold}
 @font-face { font-family: Gill Sans; src: url('../fonts/GillSans_Regular.ttf') format('truetype'); font-weight:normal}
 @font-face { font-family: Gill Sans; src: url('../fonts/GillSans_Bold.ttf') format('truetype'); font-weight:bold}
+@font-face { font-family: Eurostile; font-style:normal; font-weight:normal; src: url('../fonts/Eurostile.svg#EurostileRegular') format('svg'); font-weight:normal}

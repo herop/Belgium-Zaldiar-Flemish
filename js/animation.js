@@ -1,11 +1,17 @@
 animation.create('#evenDoeltreffendAlsTramadol bar',{
-		properties:{width:'attr'},
-		delay:[0, 800],
-		duration:800,
-		dispatch:'evenDoeltreffendAlsTramadol'}
-		);
+	properties:{width:'attr'},
+	delay:[0, 800],
+	duration:800,
+	dispatch:'evenDoeltreffendAlsTramadol'}
+);
 animation.create('#betereGiTolerantieDanTramadol bar',{
-		properties:{height:'attr'},
-		delay:['click', 200, 200, 200, 200, 200, 200, 200],
-		duration:400,
-		waitfor:'evenDoeltreffendAlsTramadol'});
+	properties:{height:'attr'},
+	delay:['click', 200, 200, 200, 200, 200, 200, 200],
+	duration:400,
+	waitfor:'evenDoeltreffendAlsTramadol'}
+);
+animation.create('#meerPijnverlichtingBijPatientenMetPijn bar',{
+	properties:{height:'attr'},
+	delay:[0, 800],
+	duration:800}
+);

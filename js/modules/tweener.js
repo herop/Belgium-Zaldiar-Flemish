@@ -107,8 +107,6 @@
 				  		values.push(s.getAttribute(prop))
 				  	})
 	  				
-	  				console.log(values)
-			    	
 					property = fill(values, max);
 			     	options.queue ? newProperties[prop] = property[options.queue[i]] : newProperties[prop] = property[n];
 	  			};
@@ -214,7 +212,6 @@
 				
 				last.event = document.createEvent('UIEvents');
 				last.event.initEvent(event, true, true);
-				console.log(last)
 				$.bind(last,'webkitTransitionEnd',function(e){
 					e.currentTarget.dispatchEvent(e.currentTarget.event);
 				});
@@ -333,7 +330,6 @@
 		
 		that.timer = setTimeout(function(){
 			for(property in that.css){
-				console.log(that.css[property])
 				css[property] = that.css[property];
 			};
 			that.item.dispatchEvent(startEvent)
@@ -406,7 +402,6 @@
 				var tweener;
 				tweener = new Tweener(item[0],item[1]);
 				slide.addInsideObject(tweener);
-				console.log(slide.insideObjects,tweener)
 			}
 		}, that)
 	},

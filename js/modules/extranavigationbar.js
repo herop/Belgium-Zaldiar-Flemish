@@ -5,7 +5,7 @@
 	}
 	ExtraNavigationBar.prototype.onpresentationcreate = function (presentation) {
 		this.presentation = presentation;
-		this.navSlide = new SwipeNavigation('nav');
+		this.navSlide = new SwipeNavigation(presentation);
 		this.navSlide.clear();
 		this.navSlide.leftSwipe = function () {
 			presentation.selectItem(3);
@@ -46,9 +46,15 @@
 			alert('pdf');
 		}, false);
 	};
-	function SwipeNavigation(element) {
+	function SwipeNavigation(presentation) {
 		var that = this;
-		this.element = $.getHTMLElement(element);
+		this.element = document.createElement('nav');
+		presentation.collection.forEach(function (chapter) {
+			if (chapter.element.getAttribute('role') !== 'home') {
+				that.element.appendChild(document.createElement('li'));	
+			}
+		});
+		presentation.element.appendChild(this.element);
 		this.element.addEventListener('swipeleft', function () {
 			that.leftSwipe();
 			that.hide();

@@ -1,6 +1,4 @@
-b { display: table-cell; position: absolute; top: 40px; left: 200px; width: 200px; padding: 10px 0px; text-align: center; background: -webkit-gradient(linear, left top, left bottom, from(#A76BC3), to(#5E3F99)); border-radius: 10px; color: white; }
-h1{font-size: 28px;height: 100px;font-family: HelveticaNarrow-Bold;display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center;background: #00a651;color: #fff;text-align: center;}
-h1 span{font-size: 14px;font-family: HelveticaNarrow-Bold;}
-h3{font-size: 22px; color: #333333; font-family: HelveticaNarrow; text-align: center;padding: 10px 0;}
-h3:before{content: url('../img/open.png');top:-10px; left:-11px;position: relative;}
-h3:after{content: url('../img/close.png');position: relative;top:10px;left:11px}
+#up footer bar { background-position: 0px -152px; }
+#down footer bar { background-position: 0px -76px; }
+#left footer bar { background-position: 0px -114px; }
+#right footer bar { background-position: 0px -38px; }

@@ -68,10 +68,10 @@
 		global.mediator.addComponent(this);
 	}
 	EventFactory.prototype.onpresentationcreate = function (presentation) {
-		presentation.element.querySelectorAll('scroll>*').forEach(function (elem) {
+		presentation.element.querySelectorAll('scroll>*, nav').forEach(function (elem) {
+			console.log(elem);
 			elem.addEventListener(events.start, onStart, false);
 		});
-		document.querySelector('nav').addEventListener(events.start, onStart, false);
 	};
 	global.$.isTouch = isTouch;
 	global.$.events = events;

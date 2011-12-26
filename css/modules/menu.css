@@ -1,10 +1,12 @@
-menu { display: block; position: absolute; float: left; width: inherit; height: 50px; overflow: hidden; }
-menu scroll > li { display: -webkit-box; float: left; width: auto; height: inherit; -webkit-box-align: center; -webkit-box-pack: center; padding: 0px 20px; border-left: 1px solid #adadad; width: 137px; }
+menu { display: block; position: absolute; float: left; width: inherit; height: 50px; overflow: hidden; padding-left: 15px; }
+menu::after { content: ''; display: block; position: absolute; top: -20px; left: -10px; width: 788px; height: 70px; -webkit-box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.4); pointer-events: none; }
+menu scroll > li { display: -webkit-box; float: left; width: 185px; height: 55px; -webkit-box-align: center; -webkit-box-pack: start; background: #EB7405; color: white; -webkit-transform: skew(0deg, 4deg); 
+	margin-top: 10px; -webkit-box-shadow: 0px -3px 6px rgba(0,0,0,0.4); }
+menu scroll > li span { display: block; -webkit-transform: skew(0deg, -4deg) translate(9px, 4px); font-family: 'Frutiger'; font-size: 14px; font-weight: bold; width: 100px; }
 menu scroll > li[role="home"] { width: 15px; overflow: hidden; font-size: 0px; background: url('../../img/home.png') no-repeat center 15px; }
 
 /* customization */
-menu { background: url('../../img/menu-background.png') repeat-x; font-size: 22px; color: #666666; }
-menu scroll > li.active { background: #00a651; color: white; }
+menu scroll > li.active { background: white; color: #eb7405; }
 menu scroll > li.active[role="home"] { background: url('../../img/home.png') no-repeat center -21px, #00a651; }
 chapter { position: absolute; top: 50px; height: 974px; }
 slide { height: 974px; }

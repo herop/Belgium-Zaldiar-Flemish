@@ -1,6 +1,296 @@
-graph{
+num{
 	display:block;
+	position: relative;
 }
-graph header{
+scale{-webkit-box-pack:justify;}
+bar{
+	display:block;
 	position:absolute;
+}
+ul{
+	list-style:none;
+}
+.bargroup{
+	list-style:none
+}
+.legend{
+	position:absolute;
+}
+graph .notice{
+	position:absolute;
+}
+.graph-wrapper{
+	width:604px;
+	border:#ec7404 2px solid;
+	border-radius:20px;
+	margin:0 auto;
+	margin-top:60px;
+	position:relative;
+	padding-top:47px;
+	padding-bottom:66px;
+}
+.graph-wrapper header{
+	position:absolute;
+		top:-7px;
+		left:20px;
+	font-family:Eurostile;
+	font-weight:bold;
+	font-size: 18px;
+	text-transform:uppercase;
+	color:#ec7404;
+	line-height:14px;
+	height:14px;
+	background:white;
+	padding: 0 10px;
+}
+.graph-wrapper header sup{
+	vertical-align: top;
+	line-height: 0;
+	font-size: 50%;
+}
+
+graph{
+	display:-webkit-box;
+	margin:0 auto;
+	position:relative;
+	-webkit-box-align:end;
+}
+graph scale{
+	font-family:Gill Sans;
+	font-size: 10px;
+}
+#up_1 graph{
+	border-left:2px solid black;
+	border-bottom:2px solid black;
+	font-family:Gill Sans;
+}
+#evenDoeltreffendAlsTramadol{
+	width:338px;
+	height:116px;
+}
+
+.horizontal{
+	position: absolute;
+	height: 20px;
+	left: -11px;
+	right:-9px;
+	bottom:-27px;
+	display:-webkit-box;
+}
+.horizontal num{
+	width: 20px;
+	display: block;
+	text-align: center;
+	position:relative;
+}
+#evenDoeltreffendAlsTramadol .horizontal num::before{
+	content:'';
+	display:block;
+	height:5px;
+	width:2px;
+	background-color:black;
+	position:absolute;
+	top:-5px;
+	left:50%;
+	margin-left:-1px;
+}
+
+.vertical{
+	position: absolute;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	top: 0;
+	bottom: 0;
+}
+#evenDoeltreffendAlsTramadol .vertical{
+	left: -85px;
+}
+#evenDoeltreffendAlsTramadol .vertical num{
+	display: -webkit-box;
+	text-align: right;
+	height: 50%;
+	-webkit-box-align: center;
+	width: 74px;
+	-webkit-box-pack: end;
+}
+#evenDoeltreffendAlsTramadol .bargroup{
+	position:absolute;
+	left:0;
+	height:100%;
+	list-style:none
+}
+#evenDoeltreffendAlsTramadol .bargroup li{
+	height:50%;
+	padding:0;
+	margin:0;
+	position:relative;
+}
+#evenDoeltreffendAlsTramadol bar{
+	position:absolute;
+	left:0;
+	top:13px;
+	height:34px;
+	background:#868889;
+}
+#evenDoeltreffendAlsTramadol .bargroup li:nth-child(2) bar{
+	background:#f29400;
+}
+#evenDoeltreffendAlsTramadol bar num{
+	font-weight:bold;
+	height:100%;
+	line-height:34px;
+	font-size: 12px;
+	position: absolute;
+	right: -40px;
+}
+#evenDoeltreffendAlsTramadol .notice{
+	position: absolute;
+	font-size: 11px;
+	width: 260px;
+	bottom: -60px;
+	left: 40px;
+}
+
+#betereGiTolerantieDanTramadol{
+	width:464px;
+	height:293px;
+	margin-left:90px;
+}
+#betereGiTolerantieDanTramadol .vertical{
+	width:30px;
+	left: -27px;
+	top: -9px;
+	bottom: -11px;
+}
+#betereGiTolerantieDanTramadol .vertical label{
+	width: 293px;
+	display: block;
+	-webkit-transform: rotate(-90deg);
+	position: absolute;
+	top: 0;
+	left: -320px;
+	-webkit-transform-origin: 100% 0%;
+	text-align: center;
+}
+#betereGiTolerantieDanTramadol .vertical num{
+	width:20px;
+	height:20px;
+	line-height:20px;
+}
+#betereGiTolerantieDanTramadol .vertical num::before{
+	content:'';
+	display:block;
+	height:2px;
+	width:5px;
+	background-color:black;
+	position:absolute;
+	top:50%;
+	right:-5px;
+	margin-top:-1px;
+}
+#betereGiTolerantieDanTramadol bar{
+	bottom:0;
+}
+#betereGiTolerantieDanTramadol .bargroup{
+	width: 424px;
+	height: 100%;
+	display: -webkit-box;
+	-webkit-box-pack: justify;
+	-webkit-box-align: end;
+	margin: 0 auto;
+}
+#betereGiTolerantieDanTramadol .bargroup li{
+	position:relative;
+	width:62px;
+	float:left;
+}
+#betereGiTolerantieDanTramadol .bargroup li bar{
+	width:31px;
+}
+#betereGiTolerantieDanTramadol .bargroup li bar:nth-of-type(1){
+	left:0;
+	background:#868889;
+}
+#betereGiTolerantieDanTramadol .bargroup li bar:nth-of-type(2){
+	right:0;
+	background:#f29400;
+}
+#betereGiTolerantieDanTramadol .bargroup li bar num{
+	font-weight: bold;
+	position: absolute;
+	font-size: 12px;
+	text-align: center;
+	width: 100%;
+	top: -20px;
+}
+#betereGiTolerantieDanTramadol .horizontal num{
+	width:25%;
+	text-align:center;
+}
+#betereGiTolerantieDanTramadol .legend{
+	width:115px;
+	right:-30px;
+	top:30px;
+	font-size:12px;
+}
+#betereGiTolerantieDanTramadol .legend li{
+	text-align:left;
+	position:relative;
+}
+#betereGiTolerantieDanTramadol .legend li::before{
+	content:'';
+	display:block;
+	width:32px;
+	height:9px;
+	background:#868889;
+	position:absolute;
+		top:5px;
+		left:-35px;
+}
+#betereGiTolerantieDanTramadol .legend li:last-of-type::before{
+	background:#f29400;
+}
+#betereGiTolerantieDanTramadol .notice{
+	left:-60px;
+	bottom:-45px;
+	font-size:14px;
+}
+
+.markers{
+	width:100%;
+	height:100%;
+	position:absolute;
+		top:0;
+		left:0;
+	color:#F29400;
+	font-family:inherit;
+	font-weight:bold;
+	font-size: 12px;
+}
+.markers span{
+	text-align:center;
+	position:absolute;
+}
+.markers span:nth-child(1){
+	top:-3px;
+	left:19px;
+}
+.markers span:nth-child(2){
+	top:157px;
+	left:147px;
+}
+.markers span:nth-child(3){
+	top:147px;
+	left:251px;
+}
+p.resume{
+	margin: 0 60px;
+	margin-top:80px;
+	background: #EC7404;
+	border-radius: 20px;
+	padding: 13px 45px;
+	color: white;
+	font-family: Eurostile;
+	text-align: center;
+	font-size: 22px;
 }

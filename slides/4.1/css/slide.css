@@ -1,3 +1,8 @@
+num{
+	display:block;
+	position: relative;
+}
+scale{-webkit-box-pack:justify;}
 .graph-wrapper{
 	width:604px;
 	border:#ec7404 2px solid;
@@ -34,14 +39,17 @@ graph{
 }
 graph scale{
 	font-family:Gill Sans;
+	font-size: 10px;
+}
+#up_1 graph{
+	border-left:2px solid black;
+	border-bottom:2px solid black;
+	font-family:Gill Sans;
 }
 #evenDoeltreffendAlsTramadol{
 	width:338px;
 	height:116px;
-	border-left:2px solid black;
-	border-bottom:2px solid black;
 }
-
 
 .horizontal{
 	position: absolute;
@@ -50,7 +58,6 @@ graph scale{
 	right:-9px;
 	bottom:-27px;
 	display:-webkit-box;
-	-webkit-box-pack:justify;
 }
 .horizontal num{
 	width: 20px;
@@ -72,13 +79,82 @@ graph scale{
 
 .vertical{
 	position: absolute;
-	left:-85px;
-	display:-webkit-box;
-	-webkit-box-pack:justify;
-	-webkit-box-orient:vertical;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	height: 100%;
+	-webkit-box-align: end;
+}
+#evenDoeltreffendAlsTramadol .vertical{
+	left: -85px;
 }
 #evenDoeltreffendAlsTramadol .vertical num{
-	display: block;
+	display: -webkit-box;
 	text-align: right;
+	height: 50%;
+	-webkit-box-align: center;
+	width: 74px;
+	-webkit-box-pack: end;
+}
+#evenDoeltreffendAlsTramadol .bargroup{
+	position:absolute;
+	left:0;
+	height:100%;
+	list-style:none
+}
+#evenDoeltreffendAlsTramadol .bargroup li{
+	height:50%;
+	padding:0;
+	margin:0;
 	position:relative;
+}
+#evenDoeltreffendAlsTramadol bar{
+	position:absolute;
+	left:0;
+	top:13px;
+	height:34px;
+	width:60px;
+	background:#868889;
+}
+#evenDoeltreffendAlsTramadol .bargroup li:nth-child(2) bar{
+	background:#f29400;
+}
+#evenDoeltreffendAlsTramadol bar num{
+	font-weight:bold;
+	height:100%;
+	line-height:34px;
+	font-size: 12px;
+	position: absolute;
+	right: -40px;
+}
+#evenDoeltreffendAlsTramadol .notice{
+	position: absolute;
+	font-size: 11px;
+	width: 260px;
+	bottom: -60px;
+	left: 40px;
+}
+
+#betereGiTolerantieDanTramadol{
+	width:464px;
+	height:293px;
+}
+#betereGiTolerantieDanTramadol .vertical{
+	width:30px;
+	left: -40px;
+}
+#betereGiTolerantieDanTramadol .vertical num{
+	width:20px;
+	height:20px;
+	line-height:20px;
+}
+#betereGiTolerantieDanTramadol .vertical num::before{
+	content:'';
+	display:block;
+	height:2px;
+	width:5px;
+	background-color:black;
+	position:absolute;
+	top:50%;
+	right:-5px;
+	margin-top:-1px;
 }

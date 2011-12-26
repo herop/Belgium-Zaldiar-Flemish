@@ -1,7 +1,8 @@
 @font-face { font-family: HelveticaNarrow; src: url('../fonts/HelveticaNarrow-Regular.ttf') format('truetype'); }
 @font-face { font-family: HelveticaNarrow-Bold; src: url('../fonts/HelveticaNarrow-Bold.ttf') format('truetype'); }
 @font-face { font-family: Frutiger; src: url('../fonts/FrutigerLTStd-Roman.otf') format('truetype'); font-weight: normal; }
-@font-face { font-family: Frutiger; src: url('../fonts/FrutigerLTStd-Bold.ttf') format('truetype'); font-weight: bold; }
-@font-face { font-family: Eurostile; src: url('../fonts/Eurostile-Cn.ttf') format('truetype'); }
-@font-face { font-family: Eurostile; src: url('../fonts/Eurostile_Bold.ttf') format('truetype'); font-weight: bold; }
-@font-face { font-family: Gill Sans; src: url('../fonts/GillSans_Regular.ttf') format('truetype');}
+@font-face { font-family: Frutiger; src: url('../fonts/FrutigerLTStd-Bold.ttf') format('truetype'); font-weight:bold}
+@font-face { font-family: Eurostile-Cn; src: url('../fonts/Eurostile-Cn.ttf') format('truetype'); }
+@font-face { font-family: Eurostile; src: url('../fonts/Eurostile_Bold.ttf') format('truetype'); font-weight:bold}
+@font-face { font-family: Gill Sans; src: url('../fonts/GillSans_Regular.ttf') format('truetype'); font-weight:normal}
+@font-face { font-family: Gill Sans; src: url('../fonts/GillSans_Bold.ttf') format('truetype'); font-weight:bold}

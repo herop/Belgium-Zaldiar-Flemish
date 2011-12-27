@@ -41,7 +41,7 @@ graph .notice{
 	padding-top:47px;
 	padding-bottom:66px;
 }
-.graph-wrapper header{
+.graph-wrapper>header, .text-wrapper>header{
 	position:absolute;
 		top:-12px;
 		left:20px;

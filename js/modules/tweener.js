@@ -27,7 +27,7 @@
 			handler = $.getHTMLElement(that.options.handler);
 				
 			$.bind(handler, $.events.end, function(){
-				that.play(that, 0)
+				that.play(that, 0);
 			}); 
 		}
 		else{ //default ? get parent slide as handler
@@ -388,8 +388,6 @@
 		var that = this;
 			
 		that.items.forEach(function(item, i){
-            console.log(item)
-
 			if(parent($.getHTMLElements(item[0])[0]) === slide.element){//check for slide tweens
 				var tweener;
 				tweener = new Tweener(item[0],item[1]);
@@ -410,24 +408,34 @@
 	animationfactory.create = function(){
 		this.items.push(arguments);//get parameters for Tweener creation
 	},
-	animationfactory.array = function(value, initial){
+	animationfactory.array = function(value){
 		var result, that;
-			
 		result = [];
 		that = this;
-		switch (value.constructor.name){
+		for(item in value){
+			value[item] = that.array(value[item]);
+			result.push(value[item]);
+		}
+		switch(value.constructor.name){
 			case 'Array':
 				result = value;
-			break;
+				break;
 			case 'Object':
-				for (item in value){
-					value[item] = that.array(value[item]);
-					result.push(value[item])
-				};
-			break;
+				try{
+					var i, max;
+					i = 0;
+					max = value.length;
+					for(i; i < max ; i++){
+						value[i] = that.array(value[i]);
+						result.push(value[i]);
+					}
+				}catch(e){
+					console.log(e)
+				}
+				break;
 			default:
-				result = [value]
-			break
+				result = [value];
+				break;
 		}
 		return result;
 	};
@@ -488,7 +496,7 @@
 		axis = ['x', 'y', 'z']
 		max_array = []
 		position = {};
-		args = that.array(arguments)
+		args = that.array(arguments);
 		args.forEach(function(item, i){
 			position[axis[i]] = that.array(item, 0);
 			max_array.push(position[axis[i]].length)
@@ -496,8 +504,9 @@
 		
 		result = [];
 		maxVal = arrayMax(max_array);
-			
+	
 		that.adjust(position, maxVal);
+		
 		position.length = position.x.length;
 			
 		return position;

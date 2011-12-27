@@ -1,0 +1,20 @@
+#up_0>header{
+	font-family: Eurostile;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: center;
+	margin: 50px 30px;
+}
+#up_0>header small{
+	display:block;
+	font-weight: normal;
+}
+#up_0 .text-wrapper{
+	padding:11px 27px;
+	font-family: Eurostile;
+	font-weight: normal;
+	font-size: 20px;
+}
+#up_0 .text-wrapper li{
+	list-style:disc
+}

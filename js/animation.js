@@ -25,7 +25,7 @@ animation.create('#yellow_1 ul li',{
 		properties:{opacity:1},
 		delay:[300,250,250],
 		duration:200,
-		dispatch:'eventManLiAppear'});		
+		dispatch:'eventManLiAppear'});
 animation.create('#yellow_3 .animation-block .man2Fly',{
 		properties:{transform:animation.translate(0,0).set()},
 		delay:[100],
@@ -47,19 +47,21 @@ animation.create('#yellow_3 .arrows',{
 		delay:[550],
 		duration:200,
 		waitfor:'eventManFliedSlide3H2'});
-  
-
 animation.create('#slide3_2 ul li',{
 	properties:{opacity:1},
 	delay:[400],
 	duration:400
 });
-/*
+animation.create('#slide-1_0 .zaldiar',{
+    properties:{opacity:1},
+    delay:['click'],
+    duration:1000
+});
 animation.create('#slide30 ul li',{
 		properties:{opacity:1},
 		delay:[400, 800, 800],
 		duration:400
-});*/
+});
 animation.create('#slide-1_0 .zaldiar',{
     properties:{opacity:1},
     delay:['click'],

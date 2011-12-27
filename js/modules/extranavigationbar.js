@@ -1,12 +1,12 @@
 (function (global) {
 	"use strict";
+	var backPage = /back/.test(document.location.pathname);
 	function ExtraNavigationBar() {
 		global.mediator.addComponent(this);
 	}
 	ExtraNavigationBar.prototype.onpresentationcreate = function (presentation) {
 		this.presentation = presentation;
-		var backPage = /back/.test(document.location.pathname),
-			chapters = ['right', 'down', 'left', 'up'],
+		var chapters = ['right', 'down', 'left', 'up'],
 			goto = function (index) {
 				if (backPage) {
 					return function () {
@@ -42,8 +42,7 @@
 			pdfButton = document.createElement('icon'),
 			wrapper = document.createElement('bar'),
 			presentation = this.presentation,
-			that = this,
-			backPage = /back/.test(document.location.pathname);
+			that = this, currentChapter;
 		[infoButton, navigationButton, pdfButton].forEach(function (button) {
 			wrapper.appendChild(button);	
 		});
@@ -56,8 +55,25 @@
 			that.navSlide.toggle();
 		}, false);
 		pdfButton.addEventListener($.events.start, function (event) {
+			var refPopupIndex = presentation.collection.length - 1,
+				menu = document.querySelector('menu');
+			if (menu) {
+				menu = menu.menu;	
+			}
 			event.stopPropagation();
-			alert('pdf');
+			if (presentation.collection[presentation.currentItemIndex].id === 'references') {
+				presentation.selectItem(parseInt(sessionStorage.getItem('currentChapter'), 10));
+				if (menu) {
+					menu.show();
+				}
+			} else {
+				sessionStorage.setItem('currentChapter', presentation.currentItemIndex);
+				presentation.selectItem(presentation.collection.length - 1);
+				if (menu) {
+					menu.hide();
+				}
+			}
+			that.navSlide.hide();
 		}, false);
 	};
 	function SwipeNavigation(presentation) {
@@ -65,7 +81,7 @@
 		this.element = document.createElement('nav');
 		this.presentation = presentation;
 		presentation.collection.forEach(function (chapter) {
-			if (chapter.element.getAttribute('role') !== 'home') {
+			if (!chapter.element.hasAttribute('role')) {
 				that.element.appendChild(document.createElement('li'));	
 			}
 		});
@@ -88,7 +104,7 @@
 		}, false);
 	}
 	SwipeNavigation.prototype.show = function () {
-		if (this.presentation.currentItemIndex === 0) {
+		if (this.presentation.currentItemIndex === 0 && !backPage) {
 			this.clear();	
 		} else {
 			this.unclear();

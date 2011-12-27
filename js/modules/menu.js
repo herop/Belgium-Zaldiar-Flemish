@@ -22,17 +22,19 @@
 					homeChapterIndex = index;	
 				}
 			}
-			this.scrollElement.appendChild(li);
-			this.links.push(li);
-			li.addEventListener('shorttouch', function (e) {
-				e.preventDefault();
-                if (that.active) {
-					if (that.presentation.collection[that.presentation.currentItemIndex] !== chapter) {					
-						that.presentation.selectItem(chapter);
-						that.selectItem(index);
+			if (chapter.element.getAttribute('role') !== 'ref-popup') {
+				this.scrollElement.appendChild(li);			
+				this.links.push(li);
+				li.addEventListener('shorttouch', function (e) {
+					e.preventDefault();
+					if (that.active) {
+						if (that.presentation.collection[that.presentation.currentItemIndex] !== chapter) {					
+							that.presentation.selectItem(chapter);
+							that.selectItem(index);
+						}
 					}
-                }
-			}, false);
+				}, false);
+			}
 			li = null;
 		}, this);
 		this.element.appendChild(this.scrollElement);
@@ -53,9 +55,11 @@
 		if (prev) {
 			prev.removeClass('active');
 		}
-		this.links[index].addClass('active');
+		if (this.links[index]) {
+			this.links[index].addClass('active');
+			this.scroll.scrollToElement(this.links[index], '400ms');
+		}
 		prev = null;
-		this.scroll.scrollToElement(this.links[index], '400ms');
 	};
     Menu.prototype.activize = function (index) {
         this.active = true;

@@ -10,3 +10,5 @@ menu scroll > li.active { background: white; color: #eb7405; }
 menu scroll > li.active[role="home"] { background: url('../../img/home.png') no-repeat center -21px, #00a651; }
 chapter { position: absolute; top: 50px; height: 974px; }
 slide { height: 974px; }
+
+menu.hide { display: none; }

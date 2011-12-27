@@ -392,20 +392,19 @@
 			var parentSlide;
 			try{
 				parentSlide = parent($.getHTMLElements(item[0])[0]);
+				if(parentSlide === slide.element){//check for slide tweens
+					var tweener;
+					tweener = new Tweener(item[0],item[1]);
+					slide.addInsideObject(tweener);
+				};
 			} catch(e) {
 				var error = '"' + item[0] + '"';
 				if(that.errors.indexOf(error) === -1){
-					var _error = new Error(error);
-					_error.name = 'Can`t get a query'
-					throw _error
-					that.errors.push(error)
+					console.log('ERROR> Can`t get a query:', error);
+					that.errors.push(error);
+					//return;
 				}
-			}
-			if(parentSlide === slide.element){//check for slide tweens
-				var tweener;
-				tweener = new Tweener(item[0],item[1]);
-				slide.addInsideObject(tweener);
-			}
+			};
 		}, that)
 	},
 	animationfactory.onpopupcreate = function(slide){//creates Tweener objects declared in animation.js

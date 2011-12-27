@@ -60,3 +60,45 @@ animation.create('#slide30 ul li',{
 		delay:[400, 800, 800],
 		duration:400
 });*/
+animation.create('#slide-1_0 .zaldiar',{
+    properties:{opacity:1},
+    delay:['click'],
+    duration:1000
+});
+
+animation.create('#slide-1_1 .topBlock',{
+    properties:{opacity:1},
+    delay:[0],
+    duration:500
+});
+animation.create('#slide-1_1 p',{
+    properties:{opacity:1},
+    delay:[0],
+    duration:500
+});
+
+animation.create('#slide-1_1 p span',{
+    handler:'#slide-1_1 p',
+    properties:{opacity:1},
+    delay:['click'],
+    duration:1000
+});
+
+animation.create('#slide-1_2 .boxes',{
+    properties:{opacity:1},
+    delay:[0],
+    duration:500
+});
+
+
+animation.create('#slide-1_2 .tab60',{
+    properties:{opacity:1},
+    delay:[0],
+    duration:500
+});
+
+animation.create('#slide-1_2 .tab20',{
+    properties:{opacity:1},
+    delay:[0],
+    duration:500
+});

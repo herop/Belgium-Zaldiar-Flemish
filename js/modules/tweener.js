@@ -26,7 +26,7 @@
 		if(that.options.handler){ //if handler is set in options ? get it
 			handler = $.getHTMLElement(that.options.handler);
 				
-			$.bind(handler, that.event.end, function(){
+			$.bind(handler, $.events.end, function(){
 				that.play(that, 0)
 			}); 
 		}
@@ -388,7 +388,8 @@
 		var that = this;
 			
 		that.items.forEach(function(item, i){
-			console.log($.getHTMLElements(item[0])[0])
+            console.log(item)
+
 			if(parent($.getHTMLElements(item[0])[0]) === slide.element){//check for slide tweens
 				var tweener;
 				tweener = new Tweener(item[0],item[1]);

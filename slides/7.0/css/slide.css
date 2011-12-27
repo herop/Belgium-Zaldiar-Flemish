@@ -1,0 +1,24 @@
+#slide7_0{
+	background: url(../img/backing.png) 100% 93% no-repeat;
+}
+#slide7_0 .container{
+	width: 545px;
+	height: 625px;
+	background: url("../img/boxes.png") no-repeat;
+	position: relative;
+	left: 110px;
+	top: 40px
+}
+#slide7_0 .container .tab{
+	width: 112px;
+	height: 112px;
+	background: url("../img/tab20.png") no-repeat;
+	position: absolute;
+	left: -53px;
+	top: 136px;
+}
+#slide7_0 .container .tab:nth-of-type(2){
+	background: url("../img/tab60.png") no-repeat;
+	left: 116px;
+	top: 20px;
+}

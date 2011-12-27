@@ -1,0 +1,7 @@
+#slide42 .content {width: 670px; margin: 0 auto; padding: 72px 0 0;}
+#slide42 .content h1 {color: #000; font-family: Eurostile; font-weight: bold; margin: 0; font-size: 24px; text-align: center}
+#slide42 .content h2 {color: #000; font-family: EurostileDemiOblique; margin: 15px 0 130px 0; font-size: 15px; text-align: center}
+#slide42 .content section {display: block; padding: 20px 15px 5px 10px; border: 2px solid #ec7404; border-radius: 15px; position: relative; margin: 0 0 38px 0;}
+#slide42 .content section::after {content: attr(title); background: #fff; position: absolute; top: -15px; left: -2px; color: #ec7404; font-family: Eurostile; font-weight: bold; font-size: 18px; padding: 5px 10px;}
+#slide42 .content section ul {list-style: inherit; margin: 0 0 0 25px; font-family: Eurostile; font-size: 18px;}
+#slide42 .content section ul .bold {font-weight: bold;}

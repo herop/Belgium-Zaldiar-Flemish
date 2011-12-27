@@ -1,0 +1,9 @@
+#yellow_1 .small-logo{background: url('../img/smalllogo.png') top center no-repeat;margin: 46px auto 72px;text-align: left;color: #000000;font:12px Frutiger;padding:80px 252px 0;}
+#yellow_1 h3 { font-family:Eurostile;font-size: 36px; color: #ed7403; background: -webkit-gradient(linear, left top, left bottom, from(#ed7403), to(#f2ad6c));-webkit-background-clip: text; -webkit-text-fill-color: transparent;text-align: center;margin-bottom: 128px;}
+#yellow_1 h2{color: #000000;font: bold 32px EurostileDemiOblique;text-align: center;margin-top:150px;}
+#yellow_1 ul {width: 635px;margin: 0 auto;}
+#yellow_1 ul li{width: 471px;height: 93px;background: url('../img/button.png') top center no-repeat;font: 18px Frutiger;color: #fff;padding: 14px 0 0 164px;margin:5px 0;position: relative;}
+#yellow_1 ul li b{font-size: 36px;}
+#yellow_1 ul li:nth-of-type(1):after{content: url('../img/icon1.png');position: absolute;right:20px;top:6px;}
+#yellow_1 ul li:nth-of-type(2):after{content: url('../img/icon2.png');position: absolute;right:20px;top:6px;}
+#yellow_1 ul li:nth-of-type(3):after{content: url('../img/icon3.png');position: absolute;right:20px;top:6px;}

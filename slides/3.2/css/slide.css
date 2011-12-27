@@ -18,6 +18,7 @@
 #slide3_2 .content .newspaper ul li{
 	margin-bottom: 15px;
 	color: #ed7403;
+	-webkit-transform: translate3d(0,0,0);
 }
 #slide3_2 p.resume{
 	margin-top: -35px;

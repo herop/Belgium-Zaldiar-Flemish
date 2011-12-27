@@ -52,12 +52,8 @@ animation.create('#slide3_2 ul li',{
 	delay:[400],
 	duration:400
 });
-animation.create('#slide3_3 .tweener',{
-	properties:{opacity:1},
-	/*queue:[1,3,4,2],*/
-	delay:[400],
-	duration:400
-});animation.create('#slide30 ul li',{
+
+animation.create('#slide30 ul li',{
 		properties:{opacity:1},
 		delay:[400, 800, 800],
 		duration:400
@@ -95,12 +91,18 @@ animation.create('#slide-1_2 .boxes',{
 
 animation.create('#slide-1_2 .tab60',{
     properties:{opacity:1},
-    delay:[0],
+    delay:[500],
     duration:500
 });
 
 animation.create('#slide-1_2 .tab20',{
     properties:{opacity:1},
-    delay:[0],
+    delay:[1000],
+    duration:500
+});
+
+animation.create('#slide-1_2 .yellowRect',{
+    properties:{opacity:1},
+    delay:[1500],
     duration:500
 });

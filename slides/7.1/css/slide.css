@@ -1,0 +1,17 @@
+#slide71 .content {width: 635px; margin: 0 auto; padding: 87px 0 0;}
+#slide71 .content h1 {margin: 0;}
+#slide71 .content .warning {margin: 130px 0 0; background: url("../img/warning.png") no-repeat; padding: 0 0 0 60px; font-size: 22px; font-family: Frutiger;}
+#slide71 .content .graph-wrapper {margin: 70px 0 0 40px; background: url("../img/graph-bg.png") left center no-repeat; width: 451px; height: 272px; position: relative; padding: 0 0 0 21px;}
+#slide71 .content .graph-wrapper .title {font-family: Eurostile;}
+#slide71 .content .graph-wrapper .graph {list-style: none; margin: 35px 0 0 2px;}
+#slide71 .content .graph-wrapper .graph li {margin: 0 0 15px 0; height: 45px; line-height: 45px; position: relative; font-size: 13px; font-family: Frutiger; font-weight: bold; padding: 0 0 0 7px; -webkit-box-shadow: 3px 3px 5px #888;}
+#slide71 .content .graph-wrapper .graph li::after {content: attr(value); position: absolute; top: 0; right: -35px; height: 45px; line-height: 45px; font-size: 13px; font-family: Frutiger; font-weight: normal;}
+#slide71 .content .graph-wrapper .graph li:nth-child(1) {width: 378px; background-image: -webkit-gradient(linear, 50% top, 50% bottom, color-stop(0.11, #A1A3A4), color-stop(0.37, #D5D6D7), color-stop(0.79, #9C9E9F));}
+#slide71 .content .graph-wrapper .graph li:nth-child(2) {width: 249px; background-image: -webkit-gradient(linear, 50% top, 50% bottom, color-stop(0.11, #cacbcb), color-stop(0.37, #f8f9f9), color-stop(0.79, #c6c7c8));}
+#slide71 .content .graph-wrapper .graph li:nth-child(3) {width: 115px; background: url("../img/zaldiar-logo.png") no-repeat;}
+#slide71 .content .graph-wrapper .x-axis {list-style: none; padding: 20px 0 0; margin: 0 0 0 -18px;}
+#slide71 .content .graph-wrapper .x-axis li {display: inline-block; margin: 0 43px 0 0; width: 37px; text-align: center;}
+#slide71 .content .graph-wrapper .x-axis li:last-child {margin: 0;}
+#slide71 .content .orange-box {margin: 85px 0 0; background: #eb7405; border-radius: 22px; padding: 27px 0 24px 60px; color: #fff; font-size: 30px; line-height: 25px; font-family: Eurostile; -webkit-box-shadow: 0 0 10px #888;}
+#slide71 .content .orange-box p {position: relative;}
+#slide71 .content .orange-box p::before {content: ''; width: 12px; height: 12px; border-radius: 6px; display: block; position: absolute; top: 7px; left: -20px; background: #f9b81c;}

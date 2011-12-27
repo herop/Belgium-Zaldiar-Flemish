@@ -10,13 +10,16 @@
 		that.current		= 0;
 		that.waitForClick	= false;
 		
-		that.defineOptions(that);
-		that.handler = that.initializeHandler(that);
-		that.steps = that.initializeSteps(that);
-	};
+		that.init(that);
+	}
 
 	tweener = Tweener.prototype; 
-
+		
+	tweener.init = function(that){
+		that.defineOptions(that);
+		that.handler 	= that.initializeHandler(that);
+		that.steps 		= that.initializeSteps(that);
+	};
 	tweener.initializeHandler = function(that){
 		var handler;
 		
@@ -38,38 +41,32 @@
 					if(that.waitForClick === true){
 						that.play(that, that.current);
 						that.waitForClick = false;
-					};
+					}
 				}); 
 			};
-		}
+		};
 		return handler;
-	};
+	},
 		/*  STEPS  */
 	tweener.initializeSteps = function(that){
-		var options,
-			tempStepsArray,
-			steps,
-			clonedProperties;
+		var options,tempStepsArray,steps,clonedProperties;
 			
 		options 		= that.options;
+		tempStepsArray 	= [];//temporary array for tween objects
 		steps 			= that.steps;
-		tempStepsArray 	= [];
 			
 		that.has.textmode(that);
 		clonedProperties = $.clone(options.properties);
-		
+			//------
 		function fill(array, length){
-			if(!array){return};
-			var j, 
-				result, 
-				loop_length;
-			j = 0;
-			result = [];
+			if(array === undefined){return};
+			var j, result, loop_length;
+			
+			j		 	= 0;
+			result 		= [];
 			loop_length = array.length - 1;
 				
-			array.forEach(function(a){
-				result.push(a);
-			});
+			array.forEach(function(a){result.push(a)})
 			for(var i = 0; i < length ; i++){
 				j > loop_length ? j = 0 : 0;
 				result[i] = array[j];
@@ -77,7 +74,6 @@
 			}
 			return result;
 		};
-		
 		n = 0;
 		if(options.queue){
 			var tArray = [];
@@ -86,60 +82,47 @@
 			});
 			steps = tArray;
 		};
-		//--
-		function ifMax(n, max){
-			n >= max ? n = 0 : 0;
-			return n;
-		}
 		//-----------------------------------
 		steps.forEach(function(step, i){ //converting array of HTML elements to array of Tween objects
-		var newOptions,
-			newProperties,
-			maxArray,
-			max,
-			tween,
-			property,
-			values;
-			
-			newOptions = $.clone(options);
-			newProperties = newOptions.properties;
-			maxArray = [];
+		var newOptions,newProperties;
+			newOptions 		= $.clone(options);
+			newProperties 	= newOptions.properties;
+			var maxArray = [];
 			
 			for(property in clonedProperties){
 				maxArray.push(clonedProperties[property].length || 0);
 			};
-			
-			max = arrayMax(maxArray);
-			
+			var max = arrayMax(maxArray);
 			for(prop in clonedProperties){
-				property = clonedProperties[prop];
-				n = ifMax(n, max);
-				
-				if(property.constructor.name === 'Array'){
+				var property = clonedProperties[prop];
+				if(property.constructor.name === 'Array'){ //for multiple input values
+					n >= max ? n = 0 : 0 //check for current array item. If input array length is smaller than step`s array then it should implement in cycle
 			    	property = fill(property, max);
-	  			}else if(property === 'attr'){
-				  	values = [];
+			     	options.queue ? newProperties[prop] = property[options.queue[i]] : newProperties[prop] = property[n];
+	  			}else if(property.constructor.name === 'String' && property === 'attr'){
+	  				n >= max ? n = 0 : 0 //check for current array item. If input array length is smaller than step`s array then it should implement in cycle
+  					
+				  	var values = [];
 				  	steps.forEach(function(s){
 				  		values.push(s.getAttribute(prop))
-				  	});
+				  	})
+	  				
 					property = fill(values, max);
+			     	options.queue ? newProperties[prop] = property[options.queue[i]] : newProperties[prop] = property[n];
 	  			};
-	  			options.queue ? newProperties[prop] = property[options.queue[i]] : newProperties[prop] = property[n];
 		 	}
-			
 			if(options.value){ //cause creating a label with value
 				newOptions.value = options.value[i];
 			};
-			
 			that.delay = that.set.delay(that, i);
 			newOptions.delay = that.delay //+ 'ms';
 			
-			tween = new Tween(step,newOptions);
+			var tween = new Tween(step,newOptions);
 			tempStepsArray.push(tween);
 			n++;
 		});
-		for(method in that.has){
-			that.has[method](that, tempStepsArray)
+		for(f in that.has){
+			that.has[f](that, tempStepsArray)
 		}
 		tempStepsArray.forEach(function(step, _index){
 			if(_index > tempStepsArray.length - 2){
@@ -395,40 +378,48 @@
 		var that = this;
 		
 		that.items = [];
-		that.errors = [];
 		that.transform = [];
 		
 		global.mediator.addComponent(that);
 		global.mediator.broadcast('animationFactoryCreate', that);
-		
+		this.errors = [];
 	};
 	animationfactory = AnimationFactory.prototype;
-	animationfactory.onslidecreate = function(slide){ //creates Tweener objects declared in animation.js
+	animationfactory.onslidecreate = function(slide){//creates Tweener objects declared in animation.js
 		var that = this;
 		
 		that.items.forEach(function(item, i){
 			var parentSlide;
 			try{
 				parentSlide = parent($.getHTMLElements(item[0])[0]);
-				if(parentSlide === slide.element){ //check for slide tweens
+				if(parentSlide === slide.element){//check for slide tweens
 					var tweener;
 					tweener = new Tweener(item[0],item[1]);
 					slide.addInsideObject(tweener);
 				};
 			} catch(e) {
-				var error = 'ERROR> Can`t get a query: "' + item[0] + '"';
+				var error = '"' + item[0] + '"';
 				if(that.errors.indexOf(error) === -1){
-					console.log(error);
+					console.log('ERROR> Can`t get a query:', error);
 					that.errors.push(error);
-					return;
+					//return;
 				}
 			};
 		}, that)
-	};
-	animationfactory.onpopupcreate = animationfactory.onslidecreate;
+	},
+	animationfactory.onpopupcreate = function(slide){//creates Tweener objects declared in animation.js
+		var that = this;
+		that.items.forEach(function(item, i){
+			if(parent($.getHTMLElements(item[0])[0]) === slide.element){//check for slide tweens
+				var tweener;
+				tweener = new Tweener(item[0],item[1]);
+				slide.addInsideObject(tweener);
+			}
+		}, that)
+	},
 	animationfactory.create = function(){
 		this.items.push(arguments);//get parameters for Tweener creation
-	};
+	},
 	animationfactory.array = function(value){
 		var result, that;
 		result = [];
@@ -451,7 +442,7 @@
 						result.push(value[i]);
 					}
 				}catch(e){
-					console.log(e);
+					console.log(e)
 				}
 				break;
 			default:

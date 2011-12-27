@@ -40,7 +40,7 @@ openPDF = (function (openPDF) {
 	return function (pdf) {
 		try { 
 			openPDF.apply(this, arguments);
-			submitReferenceOpen();
+			submitReferenceOpen.apply(this, arguments);
 		} catch (e) { /*console.log('openPDF',arguments);*/ }
 	};
 })(openPDF);

@@ -52,6 +52,11 @@ animation.create('#slide3_2 ul li',{
 	delay:[400],
 	duration:400
 });
+animation.create('#slide3_3 .tweener',{
+	properties:{opacity:1},
+	delay:[400],
+	duration:400
+});
 animation.create('#slide30 ul li',{
 		properties:{opacity:1},
 		delay:[400, 800, 800],

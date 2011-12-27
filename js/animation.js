@@ -52,6 +52,11 @@ animation.create('#slide3_2 ul li',{
 	delay:[400],
 	duration:400
 });
+animation.create('#slide-1_0 .zaldiar',{
+    properties:{opacity:1},
+    delay:['click'],
+    duration:1000
+});
 animation.create('#slide30 ul li',{
 		properties:{opacity:1},
 		delay:[400, 800, 800],

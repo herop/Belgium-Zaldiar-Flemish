@@ -47,10 +47,15 @@ animation.create('#yellow_3 .arrows',{
 		delay:[550],
 		duration:200,
 		waitfor:'eventManFliedSlide3H2'});
-  
 
 animation.create('#slide3_2 ul li',{
 	properties:{opacity:1},
+	delay:[400],
+	duration:400
+});
+animation.create('#slide3_3 .tweener',{
+	properties:{opacity:1},
+	/*queue:[1,3,4,2],*/
 	delay:[400],
 	duration:400
 });

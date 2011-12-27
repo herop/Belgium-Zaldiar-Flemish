@@ -44,7 +44,7 @@
 	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 	bottom: -30px;
 	right: 117px;
-	-webkit-transform: rotate(17deg);
+	-webkit-transform: rotate(17deg) translate3d(0,0,0);
 }
 .filmomhulde .statement{
 	font-family: EurostileDemiOblique;

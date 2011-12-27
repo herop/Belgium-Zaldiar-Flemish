@@ -1,4 +1,4 @@
-animation.create('#evenDoeltreffendAlsTramadol bar2',{
+animation.create('#evenDoeltreffendAlsTramadol bar',{
 	properties:{width:'attr'},
 	delay:[0, 800],
 	duration:800,

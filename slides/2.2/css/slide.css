@@ -1,0 +1,18 @@
+#slide-2_2 .small-logo{
+    margin-left: 250px;
+    margin-top:45px;
+    background: url('../img/smalllogo.png') no-repeat;
+    color:#000;
+    font-family: 'Frutiger';
+    font-size:12px;
+    font-weight: normal;
+    width:262px;
+    height: 10px;
+    padding-top:75px;
+}
+
+#slide-2_2 ul{
+    margin-top:90px;
+    margin-left:70px;
+    width:625px;
+}

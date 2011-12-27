@@ -26,7 +26,7 @@
 		if(that.options.handler){ //if handler is set in options ? get it
 			handler = $.getHTMLElement(that.options.handler);
 				
-			$.bind(handler, that.event.end, function(){
+			$.bind(handler, $.events.end, function(){
 				that.play(that, 0);
 			}); 
 		}

@@ -1,10 +1,12 @@
 #studieGraph { margin: 180px 70px; }
-.graph-linear { width: 545px; height: 249px; border: 1px solid black; border-width: 0px 0px 1px 1px; }
-.graph-grid-y { list-style: none; display: block; height: 250px; width: 15px; margin: 0px 0px 0px -20px; 
-	font-family: Frutiger; font-weight: normal; }
-.graph-grid-y::before { content: attr(name); display: block; position: relative; top: 75px; left: -130px; 
-	-webkit-transform: rotateZ(-90deg); width: 220px; font-size: 14px; }
+.graph-linear { width: 545px; height: 249px; border: 1px solid black; border-width: 0px 0px 1px 1px; margin: 20px 40px; }
+.graph-grid-y { list-style: none; display: block; height: 250px; width: 15px; margin: 0px 0px 0px -20px; font-family: Frutiger; font-weight: normal; }
+.graph-grid-y::before { content: attr(name); display: block; position: absolute; top: 405px; left: -40px; -webkit-transform: rotateZ(-90deg); width: 220px; font-size: 14px; }
 .graph-grid-y li { display: block; width: 15px; height: 20px; margin-bottom: 20px; }
-.graph-grid-y li::after { content: ''; display: block; width: 545px; height: 1px; background: black; 
-	position: relative; top: -10px; left: 20px; }
+.graph-grid-y li::after { content: ''; display: block; width: 545px; height: 1px; background: black; position: relative; top: -10px; left: 20px; }
 .graph-grid-y li:last-child::after { background: transparent; }
+.graph-grid-x { list-style: none; display: -webkit-box; -webkit-box-pack: justify; width: 575px; margin-top: -3px; font-family: Frutiger; margin-left: -5px; }
+.graph-grid-x li::before { content: ''; display: block; width: 1px; height: 10px; background: black; position: relative; top: -2px; left: 50%; }
+.graph-grid-x li:first-child::before, .graph-grid-x li:last-child::before { background: transparent; }
+#graphLine { display: block; position: absolute; top: 356px; left: 113px; width: 518px; height: 98px; background: url('../img/graph.png') no-repeat left top; }
+#graphLine+span { display: block; font-family: Frutiger; font-weight: bold; font-size: 14px; padding-left: 23px; background: url('../img/bullet.png') no-repeat left top; line-height: 20px; margin-top: 30px; }

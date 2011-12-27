@@ -1,22 +1,22 @@
 #slide50 .content {width: 635px; margin: 0 auto; padding: 86px 0 0;}
 #slide50 .content h1 {margin: 0;}
 #slide50 .content h2 {margin: 22px 0 0 58px;}
-#slide50 .content .graph-wrapper {margin: 78px 0 0; font-family: Frutiger;}
-#slide50 .content .graph-wrapper ul {list-style: none; color: #666566; font-size: 22px;}
-#slide50 .content .graph-wrapper p {font-size: 15px; color: #000;}
-#slide50 .content .graph-wrapper .y-axis {width: 62px; height: 517px; float: left; position: relative;}
-#slide50 .content .graph-wrapper .y-axis ul {margin: -12px 10px 0 0;}
-#slide50 .content .graph-wrapper .y-axis ul li {margin: 0 0 60px 0; text-align: right;}
-#slide50 .content .graph-wrapper .y-axis p {position: absolute; top: 240px; left: -70px; -webkit-transform: rotate(-90deg); white-space: nowrap;}
-#slide50 .content .graph-wrapper .graph {background: url("../img/graph-bg.png") no-repeat; width: 518px; height: 517px; margin: 0; float: left; position: relative;}
-#slide50 .content .graph-wrapper .graph > * {position: absolute;}
-#slide50 .content .graph-wrapper .graph .orange-line {background: url("../img/graph-orange-line.png") no-repeat; width: 473px; height: 487px; bottom: -7px; left: -3px;}
-#slide50 .content .graph-wrapper .graph .gray-lines {background: url("../img/graph-gray-lines.png") no-repeat; width: 326px; height: 375px; bottom: 0; left: 0;}
-#slide50 .content .graph-wrapper .graph .yellow-line {background: url("../img/graph-yellow-line.png") no-repeat; width: 319px; height: 404px; bottom: 12px; left: -3px;}
-#slide50 .content .graph-wrapper .graph .description {font-size: 22px; font-family: Frutiger; font-weight: bold; color: #ffc211; top: 100px; right: 35px;}
-#slide50 .content .graph-wrapper .graph .description li:last-child {color: #ed7403;}
-#slide50 .content .graph-wrapper .x-axis {position: relative; height: 60px;}
-#slide50 .content .graph-wrapper .x-axis ul {margin: 5px 0 0 43px;}
-#slide50 .content .graph-wrapper .x-axis ul li {display: inline-block; margin: 0 68px 0 0; text-align: center; width: 35px;}
-#slide50 .content .graph-wrapper .x-axis ul li:last-child {margin-right: 0;}
-#slide50 .content .graph-wrapper .x-axis p {position: absolute; bottom: 0; left: 220px; white-space: nowrap;}
+#slide50 .content .wrapper {margin: 78px 0 0; font-family: Frutiger;}
+#slide50 .content .wrapper ul {list-style: none; color: #666566; font-size: 22px;}
+#slide50 .content .wrapper p {font-size: 15px; color: #000;}
+#slide50 .content .wrapper .y-axis {width: 62px; height: 517px; float: left; position: relative;}
+#slide50 .content .wrapper .y-axis ul {margin: -12px 10px 0 0;}
+#slide50 .content .wrapper .y-axis ul li {margin: 0 0 60px 0; text-align: right;}
+#slide50 .content .wrapper .y-axis p {position: absolute; top: 240px; left: -70px; -webkit-transform: rotate(-90deg); white-space: nowrap;}
+#slide50 .content .wrapper .graph {background: url("../img/graph-bg.png") no-repeat; width: 518px; height: 517px; margin: 0; float: left; position: relative;}
+#slide50 .content .wrapper .graph > * {position: absolute;}
+#slide50 .content .wrapper .graph .orange-line {background: url("../img/graph-orange-line.png") no-repeat; width: 473px; height: 487px; bottom: -7px; left: -3px;}
+#slide50 .content .wrapper .graph .gray-lines {background: url("../img/graph-gray-lines.png") no-repeat; width: 326px; height: 375px; bottom: 0; left: 0;}
+#slide50 .content .wrapper .graph .yellow-line {background: url("../img/graph-yellow-line.png") no-repeat; width: 319px; height: 404px; bottom: 12px; left: -3px;}
+#slide50 .content .wrapper .graph .description {font-size: 22px; font-family: Frutiger; font-weight: bold; color: #ffc211; top: 100px; right: 35px;}
+#slide50 .content .wrapper .graph .description li:last-child {color: #ed7403;}
+#slide50 .content .wrapper .x-axis {position: relative; height: 60px;}
+#slide50 .content .wrapper .x-axis ul {margin: 5px 0 0 43px;}
+#slide50 .content .wrapper .x-axis ul li {display: inline-block; margin: 0 68px 0 0; text-align: center; width: 35px;}
+#slide50 .content .wrapper .x-axis ul li:last-child {margin-right: 0;}
+#slide50 .content .wrapper .x-axis p {position: absolute; bottom: 0; left: 220px; white-space: nowrap;}

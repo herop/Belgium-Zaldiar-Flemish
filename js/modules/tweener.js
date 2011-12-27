@@ -11,9 +11,9 @@
 		that.waitForClick	= false;
 		
 		that.defineOptions(that);
-		that.handler = that.initializeHandler(that);
-		that.steps = that.initializeSteps(that);
-	};
+		that.handler 	= that.initializeHandler(that);
+		that.steps 		= that.initializeSteps(that);
+	}
 
 	tweener = Tweener.prototype; 
 
@@ -43,7 +43,7 @@
 			};
 		}
 		return handler;
-	};
+	},
 		/*  STEPS  */
 	tweener.initializeSteps = function(that){
 		var options,
@@ -86,60 +86,44 @@
 			});
 			steps = tArray;
 		};
-		//--
-		function ifMax(n, max){
-			n >= max ? n = 0 : 0;
-			return n;
-		}
 		//-----------------------------------
 		steps.forEach(function(step, i){ //converting array of HTML elements to array of Tween objects
-		var newOptions,
-			newProperties,
-			maxArray,
-			max,
-			tween,
-			property,
-			values;
-			
-			newOptions = $.clone(options);
-			newProperties = newOptions.properties;
-			maxArray = [];
+		var newOptions,newProperties;
+			newOptions 		= $.clone(options);
+			newProperties 	= newOptions.properties;
+			var maxArray = [];
 			
 			for(property in clonedProperties){
 				maxArray.push(clonedProperties[property].length || 0);
 			};
-			
-			max = arrayMax(maxArray);
-			
+			var max = arrayMax(maxArray);
 			for(prop in clonedProperties){
-				property = clonedProperties[prop];
-				n = ifMax(n, max);
-				
-				if(property.constructor.name === 'Array'){
+				var property = clonedProperties[prop];
+				n >= max ? n = 0 : 0
+				if(property.constructor.name === 'Array'){ //for multiple input values
 			    	property = fill(property, max);
-	  			}else if(property === 'attr'){
-				  	values = [];
+			     	newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
+	  			}else if(property.constructor.name === 'String' && property === 'attr'){
+				  	var values = [];
 				  	steps.forEach(function(s){
 				  		values.push(s.getAttribute(prop))
-				  	});
+				  	})
 					property = fill(values, max);
-	  			};
-	  			options.queue ? newProperties[prop] = property[options.queue[i]] : newProperties[prop] = property[n];
+			     	newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
+	  			}
 		 	}
-			
 			if(options.value){ //cause creating a label with value
 				newOptions.value = options.value[i];
 			};
-			
 			that.delay = that.set.delay(that, i);
 			newOptions.delay = that.delay //+ 'ms';
 			
-			tween = new Tween(step,newOptions);
+			var tween = new Tween(step,newOptions);
 			tempStepsArray.push(tween);
 			n++;
 		});
-		for(method in that.has){
-			that.has[method](that, tempStepsArray)
+		for(f in that.has){
+			that.has[f](that, tempStepsArray)
 		}
 		tempStepsArray.forEach(function(step, _index){
 			if(_index > tempStepsArray.length - 2){
@@ -424,11 +408,11 @@
 				}
 			};
 		}, that)
-	};
-	animationfactory.onpopupcreate = animationfactory.onslidecreate;
+	},
+	animationfactory.onpopupcreate = animationfactory.onslidecreate
 	animationfactory.create = function(){
 		this.items.push(arguments);//get parameters for Tweener creation
-	};
+	},
 	animationfactory.array = function(value){
 		var result, that;
 		result = [];
@@ -451,7 +435,7 @@
 						result.push(value[i]);
 					}
 				}catch(e){
-					console.log(e);
+					console.log(e)
 				}
 				break;
 			default:

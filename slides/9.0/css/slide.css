@@ -1,0 +1,17 @@
+#referencesSlide h1{
+	margin-bottom: 15px;
+	color: #434343;
+}
+#referencesSlide ol{
+	margin: 0px 50px 0px 80px;
+	font-family: Frutiger;
+	font-size: 14px;
+	color: #434343;
+}
+#referencesSlide ol li{
+	margin-bottom: 20px;
+}
+#referencesSlide .wrapper{
+	height: 865px;
+	overflow: hidden;
+}

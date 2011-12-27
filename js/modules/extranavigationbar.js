@@ -15,7 +15,7 @@
 				} else {
 					return function () {
 						presentation.selectItem(index);	
-					}
+					};
 				}
 			};
 		this.navSlide = new SwipeNavigation(presentation);
@@ -30,7 +30,7 @@
 		}
 		this.navSlide.leftSwipe = goto(3);
 		this.navSlide.upSwipe = goto(4);
-		this.navSlide.rightSwipe = goto(1)
+		this.navSlide.rightSwipe = goto(1);
 		this.navSlide.downSwipe = goto(2);
 		presentation.collection.forEach(function (chapter) {
 			this.addBar(chapter.element.querySelector('footer'));
@@ -42,7 +42,7 @@
 			pdfButton = document.createElement('icon'),
 			wrapper = document.createElement('bar'),
 			presentation = this.presentation,
-			that = this, currentChapter;
+			that = this;
 		[infoButton, navigationButton, pdfButton].forEach(function (button) {
 			wrapper.appendChild(button);	
 		});
@@ -55,8 +55,7 @@
 			that.navSlide.toggle();
 		}, false);
 		pdfButton.addEventListener($.events.start, function (event) {
-			var refPopupIndex = presentation.collection.length - 1,
-				menu = document.querySelector('menu');
+			var menu = document.querySelector('menu');
 			if (menu) {
 				menu = menu.menu;	
 			}

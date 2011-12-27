@@ -54,8 +54,9 @@ animation.create('#slide3_2 ul li',{
 });
 animation.create('#slide3_3 .tweener',{
 	properties:{opacity:1},
-	delay:[400],
-	duration:400
+	delay:[800],
+	queue:[0,2,3,1],
+	duration:600
 });
 animation.create('#slide30 ul li',{
 		properties:{opacity:1},

@@ -14,5 +14,152 @@
 #slide-2_2 ul{
     margin-top:90px;
     margin-left:70px;
-    width:625px;
+    width:622px;
+}
+#slide-2_2 ul li{
+    padding-left:170px;
+    color:#fff;
+    font-family: 'Frutiger';
+    font-size:30px;
+    font-weight: normal;
+    background:url('../img/orange.png'),-webkit-linear-gradient(top, #ed7403 0%,#f2ad6c 100%);
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow:1px 1px 5px 1px #aaa;
+    padding:8px 0 8px 170px;
+    margin:30px 0;
+    position: relative;
+}
+#slide-2_2 ul li:nth-of-type(2){
+    padding:25px 0 25px 170px;
+}
+
+#slide-2_2 ul li:after{
+    content: "";
+    background: url('../img/smallman.png');
+    width: 130px;
+    height: 107px;
+    position: absolute;
+    bottom: -27px;
+    left: 20px;
+}
+
+#slide-2_2 .manBlock{
+    background: url('../img/man.png') no-repeat;
+    width:174px;
+    height: 468px;
+    margin-top: 15px;
+    margin-left: 310px;
+    position: relative;
+}
+
+#slide-2_2 .manBlock div{
+    background-color:#fff;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow:1px 1px 5px 1px #aaa;
+    font-family: 'Frutiger';
+    font-weight: normal;
+    font-size: 18px;
+    color: #ed7403;
+    padding:1px;
+	display: -webkit-box;
+	-webkit-box-align:center;
+}
+
+#slide-2_2 .manBlock div span{
+	display: block;
+	text-align: right;
+	padding-left:5px;
+}
+
+#slide-2_2 .manBlock div:nth-of-type(1){
+	position: relative;
+	top: 5px;
+	left: -110px;
+	width: 180px;
+}
+#slide-2_2 .manBlock div:nth-of-type(1):before{
+	content: "";
+	height:10px;
+	width:17px;
+	background: url('../img/left-arrow.png') no-repeat;
+	position: absolute;
+	top: 14px;
+	left: 180px;
+}
+
+#slide-2_2 .manBlock div:nth-of-type(2){
+	position: relative;
+	top: 10px;
+	left: 115px;
+	width: 118px;
+}
+#slide-2_2 .manBlock div:nth-of-type(2):before{
+	content: "";
+	height:10px;
+	width:17px;
+	background: url('../img/right-arrow.png') no-repeat;
+	position: absolute;
+	top: 14px;
+	left: -17px;
+}
+
+#slide-2_2 .manBlock div:nth-of-type(3){
+	position: relative;
+	top: 67px;
+	left: 135px;
+	width: 230px;
+}
+#slide-2_2 .manBlock div:nth-of-type(3):before{
+	content: "";
+	height:10px;
+	width:17px;
+	background: url('../img/right-arrow.png') no-repeat;
+	position: absolute;
+	top: 12px;
+	left: -17px;
+}
+
+#slide-2_2 .manBlock div:nth-of-type(4){
+	position: relative;
+	top: 60px;
+	left: -141px;
+	width: 215px;
+}
+#slide-2_2 .manBlock div:nth-of-type(4):before{
+	content: "";
+	height:10px;
+	width:17px;
+	background: url('../img/left-arrow.png') no-repeat;
+	position: absolute;
+	top: 20px;
+	left: 215px;
+}
+
+#slide-2_2 .manBlock div:nth-of-type(5){
+	position: relative;
+	top: 245px;
+	left: 140px;
+	width: 140px;
+}
+#slide-2_2 .manBlock div:nth-of-type(5):before{
+	content: "";
+	height:10px;
+	width:17px;
+	background: url('../img/right-arrow.png') no-repeat;
+	position: absolute;
+	top: 12px;
+	left: -17px;
+}
+
+#slide-2_2 input[type="checkbox"]{
+	-webkit-appearance:none;
+	background:url('../img/unchecked.png') 4px 4px no-repeat;
+	width: 24px;
+	height:24px;
+	margin: 4px;
+}
+
+#slide-2_2 input[type="checkbox"]:checked{
+	-webkit-appearance:none;
+	background:url('../img/checked.png') no-repeat,url('../img/unchecked.png') 4px 4px no-repeat;
 }

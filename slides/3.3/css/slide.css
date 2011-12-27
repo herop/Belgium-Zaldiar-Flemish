@@ -1,5 +1,5 @@
 #slide3_3 .content {width: 640px; margin: 0 auto; padding: 110px 0 0; background: url("../../../img/zaldiar-logo-small.png") center 27px no-repeat;}
-.boxes{
+.filmomhulde .boxes{
 	margin: 65px;
 	position: relative;
 	width: 580px;
@@ -13,7 +13,7 @@
 	color: #434343;
 	font-size: 22px;
 }
-.boxes .tab20{
+.filmomhulde .tab20{
 	width: 93px;
 	height: 93px;
 	background: url("../../../img/tab20.png") no-repeat;
@@ -21,14 +21,14 @@
 	right: 47px;
 	top: 80px;
 }
-.boxes .tab60{
+.filmomhulde .tab60{
 	width: 126px;
 	height: 126px;
 	background: url("../../../img/tab60.png") no-repeat;
 	position: absolute;
 	top: -25px;
 }
-.label{
+.filmomhulde .label{
 	background: #FEC216;
 	width: 155px;
 	height: 88px;
@@ -46,14 +46,14 @@
 	right: 117px;
 	-webkit-transform: rotate(17deg);
 }
-.statement{
+.filmomhulde .statement{
 	font-family: EurostileDemiOblique;
 	font-weight: bold;
 	color: #434343;
 	text-align: center;
 	margin-top: 100px;
 }
-.arrow_refresh{
+.filmomhulde .arrow_refresh{
 	margin: 25px 215px;
 	width: 199px;
 	height: 89px;

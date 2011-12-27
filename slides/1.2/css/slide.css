@@ -1,5 +1,5 @@
 #slide-1_2 h1{
-    /*font:33px Eurostile;*/
+
     color:#434343;
     margin-top:110px;
     margin-left:160px;
@@ -9,7 +9,7 @@
     background: url('../img/boxes.png') no-repeat;
     width:504px;
     height:392px;
-    margin-top:35px;
+    margin-top:-30px;
     margin-left:130px;
     position: relative;
 }
@@ -45,7 +45,7 @@
     -webkit-box-shadow: 1px 1px 5px 1px #AAA;
     text-align: center;
     -webkit-transform: rotate(20deg);
-    margin-top: -25px;
+    margin-top: -85px;
 }
 
 #slide-1_2 p{

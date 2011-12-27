@@ -1,9 +1,9 @@
-#slide-1_1 h1{
-    font:33px Eurostile;
-    color:#434343;
-    margin-top:65px;
-    margin-left: 70px;
-}
+    #slide-1_1 h1{
+        color:#434343;
+/*        font:33px Eurostile;
+        margin-top:65px;
+        margin-left: 70px;*/
+    }
 #slide-1_1 .topBlock{
     background: url('../img/block-background.png');
     width:622px;
@@ -40,12 +40,5 @@
     font:33px Frutiger;
     color:#434343;
     margin-top:205px;
-    line-height: 60px;
-}
-#slide-1_1 div{
-    background-color: #fff;
-    width:75px;
-    height:75px;
-    margin-left:125px;
-    margin-top:25px;
+    line-height: 65px;
 }

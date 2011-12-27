@@ -18,10 +18,4 @@
     left:110px;
     top:390px;
     z-index: 1;
-    opacity:0;
-}
-
-#slide-1_0 .zaldiar.active{
-    opacity: 1;
-    -webkit-transition: opacity 1s linear;
 }

@@ -1,5 +1,5 @@
 #slide-1_2 h1{
-    font:33px Eurostile;
+    /*font:33px Eurostile;*/
     color:#434343;
     margin-top:110px;
     margin-left:160px;
@@ -34,7 +34,9 @@
 
 #slide-1_2 .yellowRect{
     color: white;
-    font: 33px Eurostile;
+    font-family: 'Eurostile';
+    font-size: 33px;
+    font-weight: bold;
     background-color: #FEC216;
     width: 220px;
     padding: 20px;
@@ -48,7 +50,19 @@
 
 #slide-1_2 p{
     text-align: center;
-    font:22px Eurostile;
+    font-family:'Eurostile';
+    font-size:22px;
+    font-weight: bold;
     color:#434343;
     margin-top:50px;
+}
+
+#slide-1_2 .bottomRect{
+    margin-left: 270px;
+    margin-top:20px;
+    width:190px;
+    height: 75px;
+    -webkit-box-shadow:1px 1px 5px 1px #ccc;
+    -webkit-border-radius:10px;
+    background: url('../img/bottom-rect.png') 20px 1px no-repeat,rgba(255,255,255,0.5);
 }

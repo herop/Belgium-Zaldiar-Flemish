@@ -382,13 +382,26 @@
 		
 		global.mediator.addComponent(that);
 		global.mediator.broadcast('animationFactoryCreate', that);
+		this.errors = [];
 	};
 	animationfactory = AnimationFactory.prototype;
 	animationfactory.onslidecreate = function(slide){//creates Tweener objects declared in animation.js
 		var that = this;
-			
+		
 		that.items.forEach(function(item, i){
-			if(parent($.getHTMLElements(item[0])[0]) === slide.element){//check for slide tweens
+			var parentSlide;
+			try{
+				parentSlide = parent($.getHTMLElements(item[0])[0]);
+			} catch(e) {
+				var error = '"' + item[0] + '"';
+				if(that.errors.indexOf(error) === -1){
+					var _error = new Error(error);
+					_error.name = 'Can`t get a query'
+					throw _error
+					that.errors.push(error)
+				}
+			}
+			if(parentSlide === slide.element){//check for slide tweens
 				var tweener;
 				tweener = new Tweener(item[0],item[1]);
 				slide.addInsideObject(tweener);

@@ -1,0 +1,66 @@
+#slide-5_1 table {
+    margin-top:120px;
+    width:768px;
+}
+
+#slide-5_1 table thead{
+    position: relative;
+    z-index: 1;
+}
+
+#slide-5_1 table thead td{
+     background: -webkit-linear-gradient(top, #ed7403 0%,#f18e32 100%);
+     color:#fff;
+     text-align:center;
+     height: 100px;
+     padding-top: 20px;
+     font-size:16px;
+     font-family: Frutiger;
+     font-weight: bold;
+     text-shadow: -1px 0 3px #A4490B,1px 0px 3px #A4490B,0 -1px 3px #A4490B,0 1px 3px #A4490B;
+ }
+
+#slide-5_1 table thead, #slide-5_1 table tbody {
+    -webkit-box-shadow: 0px 10px 10px 0px rgba(64,64,64,0.4);
+    display: block;
+}
+
+#slide-5_1 table tbody{
+    background: -webkit-linear-gradient(left, #fff6e4 0%,#fffffe 100%);
+}
+
+#slide-5_1 table thead td span{
+    color:#fff;
+    font-size:12px;
+    font-family: Frutiger;
+    font-weight: bold;
+}
+#slide-5_1 table thead td,#slide-5_1 table tbody td{
+    width: 192px;
+}
+
+#slide-5_1 table tbody,#slide-5_1 table thead{
+    width: 768px;
+}
+
+#slide-5_1 table tbody td{
+    border-bottom:1px solid #b6ae9f;
+    height:120px;
+}
+
+#slide-5_1 table tbody tr td:nth-of-type(1){
+    padding-left:25px;
+    font-size:18px;
+    font-family: 'Eurostile';
+    color:#000;
+}
+
+#slide-5_1 input[type="checkbox"]{
+    -webkit-appearance:none;
+    width: 192px;
+    height: 85px;
+}
+
+#slide-5_1 input[type="checkbox"]:checked{
+    background: url('../img/checkbox.png') 75px 18px no-repeat;
+}

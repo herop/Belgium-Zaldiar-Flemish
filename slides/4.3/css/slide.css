@@ -40,6 +40,8 @@
 	width:inherit;
 	background:#f29400;
 }
+#meerPijnverlichtingBijPatientenMetPijn li:nth-child(1) bar{height:230px}
+#meerPijnverlichtingBijPatientenMetPijn li:nth-child(2) bar{height:179px}
 #meerPijnverlichtingBijPatientenMetPijn bar num{
 	width: 100%;
 	text-align: center;

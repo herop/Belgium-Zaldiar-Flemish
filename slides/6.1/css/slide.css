@@ -1,0 +1,194 @@
+#i_63 header{
+	font-family:Frutiger;
+	font-size:22px;
+	margin-left:85px;
+	width:545px;
+	margin-bottom:18px;
+	margin-top: 60px;
+}
+#betereGiTolerantieDanTramadol_Back{
+	width:464px;
+	height:293px;
+	margin:0 auto;
+}
+#betereGiTolerantieDanTramadol_Back .horizontal{
+	font-size:12px;
+}
+#betereGiTolerantieDanTramadol_Back .vertical{
+	width:30px;
+	left: -27px;
+	top: -9px;
+	bottom: -11px;
+}
+#betereGiTolerantieDanTramadol_Back .vertical label{
+	width: 293px;
+	left: -320px;
+}
+#betereGiTolerantieDanTramadol_Back .vertical num{
+	width:20px;
+	height:20px;
+	line-height:20px;
+}
+
+#betereGiTolerantieDanTramadol_Back .bargroup{
+	width: 424px;
+	height: 100%;
+	display: -webkit-box;
+	-webkit-box-pack: justify;
+	-webkit-box-align: end;
+	margin: 0 auto;
+}
+#betereGiTolerantieDanTramadol_Back .bargroup li{
+	position:relative;
+	width:62px;
+	float:left;
+}
+#betereGiTolerantieDanTramadol_Back .bargroup li bar{
+	width:31px;
+}
+#betereGiTolerantieDanTramadol_Back .bargroup li bar:nth-of-type(1){
+	left:0;
+	background:#868889;
+}
+#betereGiTolerantieDanTramadol_Back .bargroup li bar:nth-of-type(2){
+	right:0;
+	background:#f29400;
+}
+#betereGiTolerantieDanTramadol_Back .bargroup li bar num{
+	font-weight: bold;
+	position: absolute;
+	font-size: 12px;
+	text-align: center;
+	width: 100%;
+	top: -20px;
+}
+#betereGiTolerantieDanTramadol_Back .horizontal num{
+	width:25%;
+	text-align:center;
+}
+#i_63  graph .legend{
+	width:115px;
+	right:-30px;
+	top:30px;
+	font-size:12px;
+}
+#i_63  graph .legend li{
+	text-align:left;
+	position:relative;
+}
+#i_63  graph .legend li::before{
+	content:'';
+	display:block;
+	width:32px;
+	height:9px;
+	background:#868889;
+	position:absolute;
+		top:5px;
+		left:-35px;
+}
+#i_63 graph .legend li:last-of-type::before{
+	background:#f29400;
+}
+#betereGiTolerantieDanTramadol_Back .notice{
+	left:-60px;
+	bottom:-45px;
+	font-size:14px;
+}
+#minderSlaperigheidEnConstipatie{
+	width:370px;
+	height:155px;
+	margin-top:27px;
+}
+#minderSlaperigheidEnConstipatie .vertical{
+	left: -17px;
+	top: -7px;
+	bottom: -9px;
+}
+#minderSlaperigheidEnConstipatie .vertical label{
+	width:155px;
+	left: -185px;
+}
+#minderSlaperigheidEnConstipatie .horizontal num{
+	width:50%;
+}
+#minderSlaperigheidEnConstipatie .vertical num::before {
+	height: 1px;
+	content: '';
+	display: block;
+	width: 370px;
+	right: -377px;
+	position: absolute;
+	top: 55%;
+	background: #B1B3B4;
+}
+#minderSlaperigheidEnConstipatie .vertical num::after {
+	height: 1px;
+	content: '';
+	display: block;
+	width: 5px;
+	right: -5px;
+	position: absolute;
+	top: 50%;
+	background: #1A171B;
+}
+#minderSlaperigheidEnConstipatie .bargroup{
+	width: 304px;
+	margin: 0 auto;
+}
+#minderSlaperigheidEnConstipatie .bargroup li {
+	width:64px;
+	height:1px;
+	position:relative;
+	margin:0 44px;
+}
+#minderSlaperigheidEnConstipatie bar{
+	height:40px;
+	width:32px;
+	background:#555;
+}
+#minderSlaperigheidEnConstipatie bar num{
+	font-weight:bold;
+	width:100%;
+	position:absolute;
+	top:-20px;
+	text-align:center
+}
+#minderSlaperigheidEnConstipatie bar:first-child{
+	left:0;
+}
+#minderSlaperigheidEnConstipatie bar:last-child{
+	right:0;
+	background:#f29400
+}
+#minderSlaperigheidEnConstipatie .horizontal{
+	left: 34px;
+	right: 34px;
+	font-size: 16px;
+}
+
+#minderSlaperigheidEnConstipatie li:nth-child(1) bar:nth-child(1){height:144px;}
+#minderSlaperigheidEnConstipatie li:nth-child(1) bar:nth-child(2){height:105px;}
+#minderSlaperigheidEnConstipatie li:nth-child(2) bar:nth-child(1){height:130px;}
+#minderSlaperigheidEnConstipatie li:nth-child(2) bar:nth-child(2){height:67px;}
+
+#i_63 #minderSlaperigheidEnConstipatie .legend{
+	top: -40px;
+	width: 180px;
+	right: -110px;
+}
+#minderSlaperigheidEnConstipatie .notice{
+	left: -110px;
+	bottom: -75px;
+	font-size:14px;
+}
+num[asterisk]{
+	position:relative;
+}
+num[asterisk]::before{
+	content:attr(asterisk);
+	display:block;
+	text-align:center;
+	position:absolute;
+	width:100%;
+	top:-10px;
+}

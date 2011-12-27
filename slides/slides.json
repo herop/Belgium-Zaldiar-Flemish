@@ -21,7 +21,9 @@
 		"4.2",
 		"4.3",
 		"4.4",
-		"4.5"
+		"4.5",
+		
+		"9.0"
 	],
 	
 	"name": "Belgium Zaldiar Flamish",
@@ -51,6 +53,12 @@
 			"name": "Slide Up",
 			"id": "up",
 			"slides": ["4.0", "4.1", "4.2", "4.3", "4.4", "4.5"]
+		},
+		{
+			"name": "References",
+			"role": "ref-popup",
+			"id": "references",
+			"slides": ["9.0"]
 		}
 	]
 }

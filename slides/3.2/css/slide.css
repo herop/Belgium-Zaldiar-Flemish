@@ -1,0 +1,29 @@
+#slide3_2 .content {width: 640px; margin: 0 auto; padding: 143px 0 0; background: url("../../../img/zaldiar-logo-small.png") center 27px no-repeat;}
+#slide3_2 .content h1 {margin: 0; color: #434343;}
+#slide3_2 .content .newspaper{
+	width: 474px;
+	height: 697px;
+	background: url("../img/newspaper.png") no-repeat;
+	margin:10px 80px;
+	position: relative;
+}
+#slide3_2 .content .newspaper ul{
+	-webkit-transform: rotate(5deg);
+	font-family: Frutiger;
+	font-size: 20px;
+	position: absolute;
+	top: 178px;
+	left: 195px;
+}
+#slide3_2 .content .newspaper ul li{
+	margin-bottom: 15px;
+	color: #ed7403;
+}
+#slide3_2 p.resume{
+	margin-top: -35px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+	font-size: 27px;
+	font-family: Frutiger;
+	font-weight:bold;
+}

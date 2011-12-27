@@ -1,0 +1,6 @@
+#yellow_3 .logo{background: url('../img/logo.png') top center no-repeat;margin: 40px auto 0;text-align: left;color: #000000;font: 18px Frutiger;padding: 120px 189px 0;}
+#yellow_3 .animation-block{position: relative;margin: 55px 0 25px;height: 570px;}
+#yellow_3 .animation-block .man2Fly{position: absolute;top:0;right:110px;background: url('../img/flyman.png') top center no-repeat;width: 669px; height: 512px;-webkit-transform:translate(-643px,545px)}
+#yellow_3 .animation-block .tablet60{position: absolute;bottom:0;right:40px;background: url('../img/60tablets.png') top center no-repeat;width:405px; height:262px;opacity:0;}
+#yellow_3 h2{color: #434343;font: 22px EurostileDemiOblique;text-align: center;opacity:0;}
+#yellow_3 .arrows{background: url('../img/arrows.png') top center no-repeat;height: 86px;margin-top: 10px;opacity:0;}

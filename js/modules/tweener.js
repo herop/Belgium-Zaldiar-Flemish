@@ -27,7 +27,6 @@
 			handler = $.getHTMLElement(that.options.handler);
 				
 			$.bind(handler, that.event.end, function(){
-				alert(1)
 				that.play(that, 0);
 			}); 
 		}

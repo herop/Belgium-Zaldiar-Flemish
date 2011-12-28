@@ -1,6 +1,5 @@
 (function(global){
-	var Tween, AnimationFactory,
-		tweener, tween, animationfactory;
+	var AnimationFactory, tweener, tween, animationfactory;
 /*-----TWEENER-----*/	
 	 function Tweener(element,options){
 		var that = this;
@@ -50,17 +49,18 @@
 		var options,
 			tempStepsArray,
 			steps,
-			clonedProperties;
+			clonedProperties,
+			fill;
 			
-		options 		= that.options;
-		steps 			= that.steps;
-		tempStepsArray 	= [];
+		options = that.options;
+		steps = that.steps;
+		tempStepsArray = [];
 			
 		that.has.textmode(that);
 		clonedProperties = $.clone(options.properties);
 		
-		function fill(array, length){
-			if(!array){return};
+		fill = function (array, length){
+			if(!array){return;};
 			var j, 
 				result, 
 				loop_length;
@@ -83,15 +83,15 @@
 		if(options.queue){
 			var tArray = [];
 			options.queue.forEach(function(o){
-				tArray.push(steps[o])
+				tArray.push(steps[o]);
 			});
 			steps = tArray;
 		};
 		//-----------------------------------
 		steps.forEach(function(step, i){ //converting array of HTML elements to array of Tween objects
 		var newOptions,newProperties;
-			newOptions 		= $.clone(options);
-			newProperties 	= newOptions.properties;
+			newOptions = $.clone(options);
+			newProperties = newOptions.properties;
 			var maxArray = [];
 			
 			for(property in clonedProperties){
@@ -163,9 +163,9 @@
 	tweener.defineOptions = function(that){//setting options
 		var options = that.options;
 			
-		options.duration 	= (options.duration || 400) + 'ms';
-		options.ease 		= options.ease || 'easein';
-		options.delay		= [options.delay || '400']
+		options.duration = (options.duration || 400) + 'ms';
+		options.ease = options.ease || 'easein';
+		options.delay = [options.delay || '400'];
 	};
 	tweener.leave = function(){
 		this.clear(this);
@@ -180,9 +180,9 @@
 			return that.delays[index];
 			function set(){
 				var max, type, array; 
-				max		= that.steps.length;
-				type 	= delay.constructor.name;
-				array	= [];
+				max = that.steps.length;
+				type = delay.constructor.name;
+				array = [];
 				switch (type){
 					case 'Array':
 						var n = 0;
@@ -209,8 +209,8 @@
 			options = that.options;
 				
 			if(options.dispatch){ //set custom event for animation end. Helpful to cause different reactions between animations
-				last 	= tempStepsArray[tempStepsArray.length - 1].item;
-				event 	= options.dispatch;
+				last = tempStepsArray[tempStepsArray.length - 1].item;
+				event = options.dispatch;
 				
 				last.event = document.createEvent('UIEvents');
 				last.event.initEvent(event, true, true);
@@ -227,9 +227,9 @@
 			
 			if(options.textmode === true){//let you to animate word letters as single objects
 					
-				string 			= steps[0].innerHTML;
-				lettersArray 	= [];
-				steps 			= that.steps; 
+				string = steps[0].innerHTML;
+				lettersArray = [];
+				steps = that.steps; 
 				
 				for(var i = 0; i < string.length; i++){//letter`s array from word
 					lettersArray.push(string[i]);
@@ -270,8 +270,8 @@
 	function Tween(element,options){ //single animation object
 		var that = this;
 		
-		that.item 		= element;
-		that.options 	= options;
+		that.item = element;
+		that.options = options;
 		
 		that.build(that);
 	}
@@ -280,16 +280,16 @@
 	tween.build = function(that){
 		var properties, css, options;
 				
-		properties 	= that.options.properties;
-		css 		= {reset:{}};//object with CSS properties and clearing data
-		reset		= css.reset;
-		options 	= that.options;
-		that.delay 	= options.delay;
+		properties = that.options.properties;
+		css = {reset:{}};//object with CSS properties and clearing data
+		reset = css.reset;
+		options = that.options;
+		that.delay = options.delay;
 		
 		for(prop in properties){
 			var property, cssProperty;
 				
-			property 	= properties[prop];
+			property = properties[prop];
 			cssProperty = that.CSS[prop];
 			
 			(property === 'initial') ? property = getComputedStyle(that.item)[cssProperty] : 0; //getting property value from CSS file
@@ -365,13 +365,13 @@
 	};
 		//properties types dictionaries
 	tween.cssString = {
-		transform:	'',
-		color:		''
+		transform: '',
+		color: ''
 	};
 	tween.cssNumber = {
-		opacity:'',
-		width:	'',
-		height:	''
+		opacity: '',
+		width: '',
+		height: ''
 	};
 
 /*  ANIMATION PARAMETERS  */

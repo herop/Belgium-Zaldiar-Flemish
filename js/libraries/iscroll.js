@@ -228,7 +228,9 @@ iScroll.prototype = {
 			return;
 		}
 
-		e.preventDefault();
+		if (typeof e.target.checkValidity !== 'function') {
+            e.preventDefault();
+        }
 		e.stopPropagation();
 		
 		that.scrolling = true;		// This is probably not needed, but may be useful if iScroll is used in conjuction with other frameworks

@@ -22,8 +22,9 @@
 		
 		if(that.options.handler){ //if handler is set in options ? get it
 			handler = $.getHTMLElement(that.options.handler);
-				
+			that.waitForClick = true;
 			$.bind(handler, $.events.end, function(){
+				console.log($.events.end)
 				that.play(that, 0);
 			}); 
 		}
@@ -35,6 +36,7 @@
 					that.options.delay[0] !== 'click' ? that.play(that, that.current) : 0;
 				};
 				$.bind(handler, $.events.end, function(){
+					
 					if(that.waitForClick === true){
 						that.play(that, that.current);
 						that.waitForClick = false;
@@ -111,7 +113,6 @@
 					property = fill(values, max);
 			     	newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
 	  			}
-	  			console.log(property)
 		 	}
 			if(options.value){ //cause creating a label with value
 				newOptions.value = options.value[i];

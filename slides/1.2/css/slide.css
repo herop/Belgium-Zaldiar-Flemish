@@ -36,17 +36,21 @@
 #slide-1_2 .yellowRect{
     color: white;
     font-family: 'Eurostile';
-    font-size: 33px;
+    font-size: 30px;
     font-weight: bold;
     background-color: #FEC216;
     width: 220px;
-    padding: 20px;
     -webkit-border-radius: 15px;
     margin-left: 400px;
     -webkit-box-shadow: 1px 1px 5px 1px #AAA;
     text-align: center;
     -webkit-transform: rotate(20deg);
-    margin-top: -85px;
+    margin-top: -25px;
+	height:135px;
+	display: -webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+
 }
 
 #slide-1_2 p{

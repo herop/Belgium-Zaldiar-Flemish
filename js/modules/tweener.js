@@ -1,4 +1,5 @@
 (function(global){
+	"use strict";
 	var AnimationFactory, tweener, tween, animationfactory;
 /*-----TWEENER-----*/	
 	 function Tweener(element,options){
@@ -50,7 +51,8 @@
 			tempStepsArray,
 			steps,
 			clonedProperties,
-			fill;
+			fill,
+			tArray = [], n, f;
 			
 		options = that.options;
 		steps = that.steps;
@@ -63,7 +65,7 @@
 			if(!array){return;};
 			var j, 
 				result, 
-				loop_length;
+				loop_length, i;
 			j = 0;
 			result = [];
 			loop_length = array.length - 1;
@@ -71,7 +73,7 @@
 			array.forEach(function(a){
 				result.push(a);
 			});
-			for(var i = 0; i < length ; i++){
+			for(i = 0; i < length ; i++){
 				j > loop_length ? j = 0 : 0;
 				result[i] = array[j];
 				j++;
@@ -81,7 +83,6 @@
 		
 		n = 0;
 		if(options.queue){
-			var tArray = [];
 			options.queue.forEach(function(o){
 				tArray.push(steps[o]);
 			});
@@ -89,7 +90,7 @@
 		};
 		//-----------------------------------
 		steps.forEach(function(step, i){ //converting array of HTML elements to array of Tween objects
-		var newOptions,newProperties;
+		var newOptions,newProperties, property, prop;
 			newOptions = $.clone(options);
 			newProperties = newOptions.properties;
 			var maxArray = [];
@@ -100,10 +101,10 @@
 			var max = arrayMax(maxArray);
 			for(prop in clonedProperties){
 				var property = clonedProperties[prop];
-				n >= max ? n = 0 : 0
+				n >= max ? n = 0 : 0;
 				if(property.constructor.name === 'Array'){ //for multiple input values
-			    	property = fill(property, max);
-			     	newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
+					property = fill(property, max);
+					newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
 	  			}else if(property.constructor.name === 'String' && property === 'attr'){
 				  	var values = [];
 				  	steps.forEach(function(s){
@@ -143,6 +144,7 @@
 	};
 		/*  START ANIMATION  */
 	tweener.play = function(that, index){
+		var step;
 		if(that.current > that.steps.length - 1){
 			return;
 		};
@@ -278,7 +280,7 @@
 	tween = Tween.prototype; 
 		
 	tween.build = function(that){
-		var properties, css, options;
+		var properties, css, options, reset, prop;
 				
 		properties = that.options.properties;
 		css = {reset:{}};//object with CSS properties and clearing data
@@ -324,7 +326,7 @@
 	};
 		//playback implementation
 	tween.play = function(that){
-		var startEvent, css; 
+		var startEvent, css, property; 
 		startEvent = document.createEvent('UIEvents');
 		css = that.item.style;
 		
@@ -345,6 +347,7 @@
 		css[that.CSS.delay] = '';
 	};
 	tween.clear = function(that){
+		var property;
 		for(property in that.css.reset){
 			that.item.style[property] = that.css.reset[property];
 		};
@@ -393,20 +396,11 @@
 		
 		that.items.forEach(function(item, i){
 			var parentSlide;
-			try{
-				parentSlide = parent($.getHTMLElements(item[0])[0]);
-				if(parentSlide === slide.element){ //check for slide tweens
-					var tweener;
-					tweener = new Tweener(item[0],item[1]);
-					slide.addInsideObject(tweener);
-				};
-			} catch(e) {
-				var error = 'ERROR> Can`t get a query: "' + item[0] + '"';
-				if(that.errors.indexOf(error) === -1){
-					console.log(error);
-					that.errors.push(error);
-					return;
-				}
+			parentSlide = parent($.getHTMLElements(item[0])[0]);
+			if(parentSlide === slide.element){ //check for slide tweens
+				var tweener;
+				tweener = new Tweener(item[0],item[1]);
+				slide.addInsideObject(tweener);
 			};
 		}, that)
 	};
@@ -415,7 +409,7 @@
 		this.items.push(arguments);//get parameters for Tweener creation
 	};
 	animationfactory.array = function(value){
-		var result, that;
+		var result, that, item;
 		result = [];
 		that = this;
 		for(item in value){
@@ -467,7 +461,7 @@
 		return result;
 	};
 	animationfactory.adjust = function(value, max){
-		var that, name, set;
+		var that, name, set, node, i;
 			
 		that = this;
 		name = value.constructor.name;
@@ -497,7 +491,7 @@
 		};
 	};
 	animationfactory.compound = function(){
-		var position, max, max_array, that, axis, args;
+		var position, max, max_array, that, axis, args, result, maxVal;
 		that = this;
 		axis = ['x', 'y', 'z']
 		max_array = []

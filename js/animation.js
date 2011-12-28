@@ -20,7 +20,13 @@ animation.create('#yellow_0 .flyman-block .manLines',{
 		properties:{opacity:1},
 		delay:[280],
 		duration:150,
-		waitfor:'eventManFlied'});
+		waitfor:'eventManFlied',
+		dispatch:'eventH2'});
+animation.create('#yellow_0 h2',{
+		properties:{opacity:1},
+		delay:[280],
+		duration:150,
+		waitfor:'eventH2'});
 
 animation.create('#yellow_1 ul li',{
 		properties:{opacity:1},
@@ -79,25 +85,11 @@ animation.create('#slide-1_1 p',{
     delay:['click'],
     duration:500
 });
-animation.create('#slide-1_2 .boxes',{
+animation.create('#slide-1_2 .tween',{
     properties:{opacity:1},
-    delay:[0],
-    duration:500
-});
-animation.create('#slide-1_2 .tab60',{
-    properties:{opacity:1},
-    delay:[500],
-    duration:500
-});
-animation.create('#slide-1_2 .tab20',{
-    properties:{opacity:1},
-    delay:[1000],
-    duration:500
-});
-animation.create('#slide-1_2 .yellowRect',{
-    properties:{opacity:1},
-    delay:[1500],
-    duration:500
+    delay:[800],
+	queue:[0,2,3,1],
+    duration:600
 });
 
 animation.create('#slide-2_2 .manBlock',{

@@ -2,7 +2,7 @@
 #slide71 .content h1 {margin: 0;}
 #slide71 .content .warning {margin: 130px 0 0; background: url("../img/warning.png") no-repeat; padding: 0 0 0 60px; font-size: 22px; font-family: Frutiger;}
 #slide71 .content .wrapper {margin: 70px 0 0 40px; background: url("../img/graph-bg.png") left center no-repeat; width: 451px; height: 272px; position: relative; padding: 0 0 0 21px;}
-#slide71 .content .wrapper .title {font-family: Eurostile;}
+#slide71 .content .wrapper .title {font-family: Eurostile;position: relative;top: -10px;}
 #slide71 .content .wrapper .graph {list-style: none; margin: 35px 0 0 2px;}
 #slide71 .content .wrapper .graph li {margin: 0 0 15px 0; height: 45px; line-height: 45px; position: relative; font-size: 13px; font-family: Frutiger; font-weight: bold; padding: 0 0 0 7px; -webkit-box-shadow: 3px 3px 5px #888;}
 #slide71 .content .wrapper .graph li::after {content: attr(value); position: absolute; top: 0; right: -35px; height: 45px; line-height: 45px; font-size: 13px; font-family: Frutiger; font-weight: normal;}

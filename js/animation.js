@@ -35,7 +35,7 @@ animation.create('#yellow_3 .animation-block .tablet60',{
 		properties:{opacity:1},
 		delay:[350],
 		duration:250,
- 	    dispatch:'eventManFliedSlide3H2',
+		dispatch:'eventManFliedSlide3H2',
 		waitfor:'eventManFliedSlide3'});
 animation.create('#yellow_3 h2',{
 		properties:{opacity:1},

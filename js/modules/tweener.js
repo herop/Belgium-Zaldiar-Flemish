@@ -1,18 +1,17 @@
 (function(global){
-	var Tweener, Tween, AnimationFactory,
+	var Tween, AnimationFactory,
 		tweener, tween, animationfactory;
 /*-----TWEENER-----*/	
-	Tweener = function(element,options){
+	 function Tweener(element,options){
 		var that = this;
-		that.steps			= $.getHTMLElements(element);
-		that.delays			= [];
-		that.options		= options;
-		that.current		= 0;
-		that.waitForClick	= false;
-		
+		that.steps = $.getHTMLElements(element);
+		that.delays = [];
+		that.options = options;
+		that.current = 0;
+		that.waitForClick = false;
 		that.defineOptions(that);
-		that.handler 	= that.initializeHandler(that);
-		that.steps 		= that.initializeSteps(that);
+		that.handler = that.initializeHandler(that);
+		that.steps = that.initializeSteps(that);
 	}
 
 	tweener = Tweener.prototype; 
@@ -24,7 +23,7 @@
 			handler = $.getHTMLElement(that.options.handler);
 			that.waitForClick = true;
 			$.bind(handler, $.events.end, function(){
-				console.log($.events.end)
+				
 				that.play(that, 0);
 			}); 
 		}
@@ -45,7 +44,7 @@
 			};
 		}
 		return handler;
-	},
+	};
 		/*  STEPS  */
 	tweener.initializeSteps = function(that){
 		var options,
@@ -141,7 +140,7 @@
 			})
 		})
 		return tempStepsArray;
-	},
+	};
 		/*  START ANIMATION  */
 	tweener.play = function(that, index){
 		if(that.current > that.steps.length - 1){
@@ -154,12 +153,12 @@
 		step = that.steps[index];
 		step.play(step);
 		that.current++;
-	},
+	};
 		/*  CLEAR  */
 	tweener.clear = function(that){
 		that.steps.forEach(function(step){step.clear(step);});
 		that.current = 0;
-	},
+	};
 		/*  DEFINE OPTIONS  */
 	tweener.defineOptions = function(that){//setting options
 		var options = that.options;
@@ -167,11 +166,11 @@
 		options.duration 	= (options.duration || 400) + 'ms';
 		options.ease 		= options.ease || 'easein';
 		options.delay		= [options.delay || '400']
-	},
+	};
 	tweener.leave = function(){
 		this.clear(this);
-	},
-	tweener.enter = function(){}
+	};
+	tweener.enter = function(){};
 	tweener.set = {
 		delay:function(that, index){
 			var delay;
@@ -200,7 +199,7 @@
 				return array;
 			}
 		}
-	}	
+	};
 		/*  Service Functions  */
 	tweener.has = {
 			//------------//
@@ -265,10 +264,10 @@
 				});
 			};
 		}
-	}
+	};
 
 /*-------------------------*/
-	Tween = function(element,options){ //single animation object
+	function Tween(element,options){ //single animation object
 		var that = this;
 		
 		that.item 		= element;
@@ -322,7 +321,7 @@
 			that.item.appendChild(label)
 		}
 		that.clear(that);
-	}
+	};
 		//playback implementation
 	tween.play = function(that){
 		var startEvent, css; 
@@ -337,20 +336,20 @@
 			};
 			that.item.dispatchEvent(startEvent)
 		}, that.delay);
-	}
+	};
 	tween.revert = function(that){
 		var css = that.item.style;
 		for(property in that.css.reset){
 			(property === that.CSS.duration || property === that.CSS.ease) ? (css[property] = css[property]) : (css[property] = that.css.reset[property]) 
 		};
 		css[that.CSS.delay] = '';
-	}
+	};
 	tween.clear = function(that){
 		for(property in that.css.reset){
 			that.item.style[property] = that.css.reset[property];
 		};
 		clearTimeout(that.timer)
-	},
+	};
 	tween.CSS = {//CSS properties dictionary
 		duration:	'webkitTransitionDuration',
 		ease:		'webkitTransitionTimingFunction',
@@ -363,17 +362,17 @@
 		background:	'background',
 		color:		'color',
 		opacity:	'webkitOpacity'
-	},
+	};
 		//properties types dictionaries
 	tween.cssString = {
 		transform:	'',
 		color:		''
-	},
+	};
 	tween.cssNumber = {
 		opacity:'',
 		width:	'',
 		height:	''
-	}
+	};
 
 /*  ANIMATION PARAMETERS  */
 	/**/
@@ -410,11 +409,11 @@
 				}
 			};
 		}, that)
-	},
-	animationfactory.onpopupcreate = animationfactory.onslidecreate
+	};
+	animationfactory.onpopupcreate = animationfactory.onslidecreate;
 	animationfactory.create = function(){
 		this.items.push(arguments);//get parameters for Tweener creation
-	},
+	};
 	animationfactory.array = function(value){
 		var result, that;
 		result = [];
@@ -468,12 +467,12 @@
 		return result;
 	};
 	animationfactory.adjust = function(value, max){
-		var that, name;
+		var that, name, set;
 			
 		that = this;
 		name = value.constructor.name;
 			
-		function set(node){
+		set = function(node){
 			if(node.length === 1){
 				var def = node[0];
 				for(i = 0; i < max; i++){
@@ -550,32 +549,32 @@
 		return that;
 	};
 	animationfactory.rotate = function(x, y, z){
-			var position, max, result, that, i, j;
-			i = j = 0;
-			that = this;
-			x = x || 0; y = y || 0; z = z || 0;
-			result = []
-			position = that.compound(x,y,z)
-			max = [
-				position.x.length,
-				position.y.length,
-				position.z.length
-			].max();	
-			that.transform = that.fill(that.transform, max);
-			max = [max, that.transform.length].max()
-			for(i; i < max; i++){
-				var X, Y, Z;
-				j > position.length ? j = 0 : 0;
-				X = 'rotateX(' + (position.x[j] || 0) + 'deg) ';
-				Y = 'rotateY(' + (position.y[j] || 0) + 'deg) ';
-				Z = 'rotateZ(' + (position.z[j] || 0) + 'deg) ';
-				
-				result[i] = that.transform[i] + X + Y + Z;
-				j++
-			};
-			that.transform = result;
-			return that;
-		},
+		var position, max, result, that, i, j;
+		i = j = 0;
+		that = this;
+		x = x || 0; y = y || 0; z = z || 0;
+		result = []
+		position = that.compound(x,y,z)
+		max = [
+			position.x.length,
+			position.y.length,
+			position.z.length
+		].max();	
+		that.transform = that.fill(that.transform, max);
+		max = [max, that.transform.length].max()
+		for(i; i < max; i++){
+			var X, Y, Z;
+			j > position.length ? j = 0 : 0;
+			X = 'rotateX(' + (position.x[j] || 0) + 'deg) ';
+			Y = 'rotateY(' + (position.y[j] || 0) + 'deg) ';
+			Z = 'rotateZ(' + (position.z[j] || 0) + 'deg) ';
+			
+			result[i] = that.transform[i] + X + Y + Z;
+			j++
+		};
+		that.transform = result;
+		return that;
+	};
 	animationfactory.skew = function(x, y){
 		var position, max, result, that, i, j;
 		i = j = 0;
@@ -626,7 +625,7 @@
 	};
 	animationfactory.set = function(){
 		return this.transform;
-	},
+	};
 	animationfactory.ease = {
 		'default':	'default',
 		linear:		'linear',
@@ -634,7 +633,7 @@
 		out:		'ease-out',
 		inOut:		'ease-in-out',
 		cubic:		'cubic-bezier'
-	},
+	};
 	animationfactory.block = function(inputValue, inputUnit){
 		var value, unit, result;
 			
@@ -675,7 +674,7 @@
 			p = p.parentNode;
 		}
  		return p;
-	}
+	};
 	global.animation = new AnimationFactory();
 	function arrayMax(array) {
 		var max, len, i;

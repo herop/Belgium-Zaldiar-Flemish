@@ -111,6 +111,7 @@
 					property = fill(values, max);
 			     	newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
 	  			}
+	  			console.log(property)
 		 	}
 			if(options.value){ //cause creating a label with value
 				newOptions.value = options.value[i];

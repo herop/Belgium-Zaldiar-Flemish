@@ -113,7 +113,7 @@
 					property = fill(values, max);
 					newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
 				}
-		 	}
+			}
 			if(options.value){ //cause creating a label with value
 				newOptions.value = options.value[i];
 			};
@@ -125,7 +125,7 @@
 			n++;
 		});
 		for(f in that.has){
-			that.has[f](that, tempStepsArray)
+			that.has[f](that, tempStepsArray);
 		}
 		tempStepsArray.forEach(function(step, _index){
 			if(_index > tempStepsArray.length - 2){

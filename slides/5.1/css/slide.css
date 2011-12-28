@@ -9,7 +9,7 @@
 }
 
 #slide-5_1 table thead td{
-     background: -webkit-linear-gradient(top, #ed7403 0%,#f18e32 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ed7403), color-stop(100%,#f18e32));
      color:#fff;
      text-align:center;
      height: 100px;
@@ -26,7 +26,7 @@
 }
 
 #slide-5_1 table tbody{
-    background: -webkit-linear-gradient(left, #fff6e4 0%,#fffffe 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff6e4), color-stop(100%,#fffffe));
 }
 
 #slide-5_1 table thead td span{
@@ -60,6 +60,7 @@
     width: 192px;
     height: 85px;
 	pointer-events:none;
+	border:none;
 }
 
 #slide-5_1 input[type="checkbox"]:checked{

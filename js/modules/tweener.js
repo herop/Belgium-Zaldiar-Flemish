@@ -90,11 +90,13 @@
 		};
 		//-----------------------------------
 		steps.forEach(function(step, i){ //converting array of HTML elements to array of Tween objects
-		var newOptions,newProperties, property, prop, maxArray, max, tween, values;
+			var newOptions,newProperties, property, prop, maxArray, max, tween, values, isAttr;
 			newOptions = $.clone(options);
 			newProperties = newOptions.properties;
 			maxArray = [];
-			
+			isAttr = function (property) {
+				return property.constructor.name === 'String' && property === 'attr';
+			};
 			for(property in clonedProperties){
 				maxArray.push(clonedProperties[property].length || 0);
 			};
@@ -105,7 +107,7 @@
 				if(property.constructor.name === 'Array'){ //for multiple input values
 					property = fill(property, max);
 					newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
-				}else if(property.constructor.name === 'String' && property === 'attr'){
+				}else if(isAttr(property)){
 					values = [];
 					steps.forEach(function(s){
 						values.push(s.getAttribute(prop));
@@ -656,15 +658,17 @@
 		var p = o.parentNode;
  		while(p){
 			var isFind=true;
-			if(isFind){isFind = p.tagName === ('SLIDE' || 'POPUP');}
-			if(isFind && id){isFind = p.id === id;}
+			if (isFind) {
+				isFind = p.tagName === ('SLIDE' || 'POPUP');
+				if(id){isFind = p.id === id;}
+			}
 			if(isFind && classes){
 				for(var i=0;i<classes.length;i++){
 					isFind = p.hasClass(classes[i]);
-				if(!isFind) break;
+					if(!isFind) break;
+				}
 			}
-		}
-		if(isFind) break;
+			if(isFind) break;
 			p = p.parentNode;
 		}
  		return p;

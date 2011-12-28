@@ -59,6 +59,7 @@
     -webkit-appearance:none;
     width: 192px;
     height: 85px;
+	pointer-events:none;
 }
 
 #slide-5_1 input[type="checkbox"]:checked{

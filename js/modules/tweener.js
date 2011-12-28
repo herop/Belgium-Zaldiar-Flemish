@@ -90,26 +90,26 @@
 		};
 		//-----------------------------------
 		steps.forEach(function(step, i){ //converting array of HTML elements to array of Tween objects
-		var newOptions,newProperties, property, prop;
+		var newOptions,newProperties, property, prop, maxArray, max, tween, values;
 			newOptions = $.clone(options);
 			newProperties = newOptions.properties;
-			var maxArray = [];
+			maxArray = [];
 			
 			for(property in clonedProperties){
 				maxArray.push(clonedProperties[property].length || 0);
 			};
-			var max = arrayMax(maxArray);
+			max = arrayMax(maxArray);
 			for(prop in clonedProperties){
-				var property = clonedProperties[prop];
+				property = clonedProperties[prop];
 				n >= max ? n = 0 : 0;
 				if(property.constructor.name === 'Array'){ //for multiple input values
 					property = fill(property, max);
 					newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
-	  			}else if(property.constructor.name === 'String' && property === 'attr'){
-				  	var values = [];
-				  	steps.forEach(function(s){
-				  		values.push(s.getAttribute(prop))
-				  	})
+				}else if(property.constructor.name === 'String' && property === 'attr'){
+					values = [];
+					steps.forEach(function(s){
+						values.push(s.getAttribute(prop));
+					});
 					property = fill(values, max);
 			     	newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
 	  			}
@@ -120,7 +120,7 @@
 			that.delay = that.set.delay(that, i);
 			newOptions.delay = that.delay //+ 'ms';
 			
-			var tween = new Tween(step,newOptions);
+			tween = new Tween(step,newOptions);
 			tempStepsArray.push(tween);
 			n++;
 		});

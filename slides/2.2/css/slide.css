@@ -60,7 +60,7 @@
     font-weight: normal;
     font-size: 18px;
     color: #ed7403;
-    padding:1px;
+    padding:5px;
 	display: -webkit-box;
 	-webkit-box-align:center;
 }
@@ -73,8 +73,8 @@
 
 #slide-2_2 .manBlock div:nth-of-type(1){
 	position: relative;
-	top: 5px;
-	left: -110px;
+	top: 0px;
+	left: -116px;
 	width: 180px;
 }
 #slide-2_2 .manBlock div:nth-of-type(1):before{
@@ -83,13 +83,13 @@
 	width:17px;
 	background: url('../img/left-arrow.png') no-repeat;
 	position: absolute;
-	top: 14px;
-	left: 180px;
+	top: 18px;
+	left: 189px;
 }
 
 #slide-2_2 .manBlock div:nth-of-type(2){
 	position: relative;
-	top: 10px;
+	top: 0;
 	left: 115px;
 	width: 118px;
 }
@@ -99,13 +99,13 @@
 	width:17px;
 	background: url('../img/right-arrow.png') no-repeat;
 	position: absolute;
-	top: 14px;
+	top: 17px;
 	left: -17px;
 }
 
 #slide-2_2 .manBlock div:nth-of-type(3){
 	position: relative;
-	top: 67px;
+	top: 50px;
 	left: 135px;
 	width: 230px;
 }
@@ -115,14 +115,14 @@
 	width:17px;
 	background: url('../img/right-arrow.png') no-repeat;
 	position: absolute;
-	top: 12px;
+	top: 17px;
 	left: -17px;
 }
 
 #slide-2_2 .manBlock div:nth-of-type(4){
 	position: relative;
-	top: 60px;
-	left: -141px;
+	top: 40px;
+	left: -150px;
 	width: 215px;
 }
 #slide-2_2 .manBlock div:nth-of-type(4):before{
@@ -132,12 +132,12 @@
 	background: url('../img/left-arrow.png') no-repeat;
 	position: absolute;
 	top: 20px;
-	left: 215px;
+	left: 223px;
 }
 
 #slide-2_2 .manBlock div:nth-of-type(5){
 	position: relative;
-	top: 245px;
+	top: 215px;
 	left: 140px;
 	width: 140px;
 }
@@ -147,19 +147,19 @@
 	width:17px;
 	background: url('../img/right-arrow.png') no-repeat;
 	position: absolute;
-	top: 12px;
+	top: 17px;
 	left: -17px;
 }
 
 #slide-2_2 input[type="checkbox"]{
 	-webkit-appearance:none;
-	background:url('../img/unchecked.png') 4px 4px no-repeat;
-	width: 24px;
-	height:24px;
+	background:url('../img/unchecked.png') no-repeat;
+	width: 23px;
+	height:23px;
 	margin: 4px;
 }
 
 #slide-2_2 input[type="checkbox"]:checked{
 	-webkit-appearance:none;
-	background:url('../img/checked.png') no-repeat,url('../img/unchecked.png') 4px 4px no-repeat;
+	background:url('../img/checked.png') no-repeat;
 }

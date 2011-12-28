@@ -5,8 +5,8 @@ nav li { display: block; position: absolute; background: url('../../img/nav-arro
 /* slide up */
 nav li:nth-of-type(1) { top: 20px; left: 50%; width: 100px; height: 80px; background-position: 0px 0px; margin: 0px 0px 0px -50px; }
 /* slide right */
-nav li:nth-of-type(2) { top: 50%; left: 650px; width: 100px; height: 85px; background-position: -100px 0px; margin: -42px 0px 0px 0px; }
+nav li:nth-of-type(2) { top: 50%; left: 650px; width: 100px; height: 85px; background-position: -100px 0px; margin: -26px 0px 0px 0px; }
 /* slide down */
 nav li:nth-of-type(3) { top: 890px; left: 50%; width: 100px; height: 80px; background-position: -109px -104px; margin: 0px 0px 0px -50px; }
 /* slide left */
-nav li:nth-of-type(4) { top: 50%; left: 10px; width: 100px; height: 95px; background-position: 0px -90px; margin: -47px 0px 0px 0px; }
+nav li:nth-of-type(4) { top: 50%; left: 10px; width: 100px; height: 95px; background-position: 0px -90px; margin: -36px 0px 0px 0px; }

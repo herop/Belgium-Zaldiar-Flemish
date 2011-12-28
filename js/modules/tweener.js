@@ -111,14 +111,14 @@
 						values.push(s.getAttribute(prop));
 					});
 					property = fill(values, max);
-			     	newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
-	  			}
+					newProperties[prop] = options.queue ? property[options.queue[i]] : property[n];
+				}
 		 	}
 			if(options.value){ //cause creating a label with value
 				newOptions.value = options.value[i];
 			};
 			that.delay = that.set.delay(that, i);
-			newOptions.delay = that.delay //+ 'ms';
+			newOptions.delay = that.delay; //+ 'ms';
 			
 			tween = new Tween(step,newOptions);
 			tempStepsArray.push(tween);

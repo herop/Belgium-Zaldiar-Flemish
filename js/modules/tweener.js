@@ -127,16 +127,16 @@
 		for(f in that.has){
 			that.has[f](that, tempStepsArray);
 		}
-		tempStepsArray.forEach(function(step, _index){
-			if(_index > tempStepsArray.length - 2){
+		tempStepsArray.forEach(function(step, index){
+			if(index > tempStepsArray.length - 2){
 				return;
 			}
-			tempStepsArray[_index].item.addEventListener('webkitTransitionStart',function(){
-				if(tempStepsArray[_index + 1].delay === 'click'){
+			tempStepsArray[index].item.addEventListener('webkitTransitionStart',function(){
+				if(tempStepsArray[index + 1].delay === 'click'){
 					that.waitForClick = true;
 					return;
 				}else{
-					that.play(that, _index+1);
+					that.play(that, index+1);
 				}
 			})
 		})

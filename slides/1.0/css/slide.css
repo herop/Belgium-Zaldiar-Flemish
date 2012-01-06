@@ -4,7 +4,16 @@
 
 #slide-1_0 .zaldiar{
     position: absolute;
-    background: url('../img/zaldiar.png');
+    background: url('../img/zald.png') no-repeat;
+    width:482px;
+    height:398px;
+    left:131px;
+    top:397px;
+    z-index: 1;
+}
+#slide-1_0 .stetoscope{
+    position: absolute;
+    background: url('../img/zaldiar.png') no-repeat;
     width:482px;
     height:398px;
     left:110px;

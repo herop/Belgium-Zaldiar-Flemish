@@ -10,24 +10,16 @@ animation.create('#betereGiTolerantieDanTramadol bar',{
 		delay:['click', 200, 200, 200, 200, 200, 200, 200],
 		duration:400,
 		waitfor:'evenDoeltreffendAlsTramadol'});
-		
-animation.create('#yellow_0 .flyman-block .manFleing',{
+animation.create('#yellow_0 .flyman-block',{
 		properties:{transform:animation.translate(0,0).set()},
 		delay:[100],
 		duration:300,
 		dispatch:'eventManFlied'});
-animation.create('#yellow_0 .flyman-block .manLines',{
-		properties:{opacity:1},
-		delay:[280],
-		duration:150,
-		waitfor:'eventManFlied',
-		dispatch:'eventH2'});
 animation.create('#yellow_0 h2',{
 		properties:{opacity:1},
 		delay:[280],
 		duration:150,
-		waitfor:'eventH2'});
-
+		waitfor:'eventManFlied'});
 animation.create('#yellow_1 ul li',{
 		properties:{opacity:1},
 		delay:[300,250,250],
@@ -70,7 +62,7 @@ animation.create('#slide30 ul li',{
 		delay:[400, 800, 800],
 		duration:400
 });
-animation.create('#slide-1_0 .zaldiar',{
+animation.create('#slide-1_0 .tween',{
     properties:{opacity:1},
     delay:['click'],
     duration:1000

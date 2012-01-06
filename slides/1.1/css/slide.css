@@ -8,7 +8,7 @@
     background: url('../img/block-background.png');
     width:622px;
     height:220px;
-    margin-top: 60px;
+    margin-top: 120px;
     margin-left: 70px;
     -webkit-border-radius: 15px;
     -webkit-box-shadow:1px 1px 3px 1px #ccc;
@@ -39,6 +39,6 @@
     background: url('../img/yellow-arrow.png') no-repeat;
     font:33px Frutiger;
     color:#434343;
-    margin-top:205px;
+    margin-top:145px;
     line-height: 65px;
 }

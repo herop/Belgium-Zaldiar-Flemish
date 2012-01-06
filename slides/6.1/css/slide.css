@@ -49,11 +49,19 @@
 #betereGiTolerantieDanTramadol_Back .bargroup li bar:nth-of-type(1){
 	left:0;
 	background:#868889;
+	height: 256px;
 }
 #betereGiTolerantieDanTramadol_Back .bargroup li bar:nth-of-type(2){
 	right:0;
 	background:#f29400;
+	height: 96px;
 }
+#betereGiTolerantieDanTramadol_Back .bargroup li:nth-of-type(2) bar:nth-of-type(1){height: 95px;}
+#betereGiTolerantieDanTramadol_Back .bargroup li:nth-of-type(2) bar:nth-of-type(2){height: 28px;}
+#betereGiTolerantieDanTramadol_Back .bargroup li:nth-of-type(3) bar:nth-of-type(1){height: 108px;}
+#betereGiTolerantieDanTramadol_Back .bargroup li:nth-of-type(3) bar:nth-of-type(2){height: 37px;}
+#betereGiTolerantieDanTramadol_Back .bargroup li:nth-of-type(4) bar:nth-of-type(1){height: 35px;}
+#betereGiTolerantieDanTramadol_Back .bargroup li:nth-of-type(4) bar:nth-of-type(2){height: 7px;}
 #betereGiTolerantieDanTramadol_Back .bargroup li bar num{
 	font-weight: bold;
 	position: absolute;

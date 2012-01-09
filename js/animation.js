@@ -95,3 +95,15 @@ animation.create('#slide-2_2 .tween',{
 	delay:['click',0],
 	duration:500
 });
+animation.create('#meerPijnverlichtingBijPatientenMetPijn bar',{
+	properties:{height:'attr'},
+	delay:[0, 800],
+	duration:800,
+	dispatch:'meerPijnverlichtingBijPatientenMetPijn'}
+);
+animation.create('#meerPijnverlichtingBijPatientenMetPijn .bargroup num',{
+	properties:{opacity:1},
+	delay:[0],
+	duration:800,
+	waitfor:'meerPijnverlichtingBijPatientenMetPijn'}
+);

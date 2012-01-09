@@ -1,4 +1,3 @@
-
 animation.create('#evenDoeltreffendAlsTramadol bar',{
 	properties:{width:'attr'},
 	delay:[0, 800],
@@ -6,10 +5,18 @@ animation.create('#evenDoeltreffendAlsTramadol bar',{
 	dispatch:'evenDoeltreffendAlsTramadol'}
 );
 animation.create('#betereGiTolerantieDanTramadol bar',{
-		properties:{height:'attr'},
-		delay:['click', 200, 200, 200, 200, 200, 200, 200],
-		duration:400,
-		waitfor:'evenDoeltreffendAlsTramadol'});
+	properties:{height:'attr'},
+	delay:[200, 200, 200, 200, 200, 200, 200, 200],
+	duration:400,
+	waitfor:'evenDoeltreffendAlsTramadol',
+	dispatch:'betereGiTolerantieDanTramadol'}
+);
+animation.create('#betereGiTolerantieDanTramadol .markers',{
+	properties:{opacity:1},
+	delay:[0],
+	duration:800,
+	waitfor:'betereGiTolerantieDanTramadol'}
+);
 animation.create('#yellow_0 .flyman-block',{
 		properties:{transform:animation.translate(0,0).set()},
 		delay:[100],
@@ -83,10 +90,8 @@ animation.create('#slide-1_2 .tween',{
 	queue:[0,2,3,1],
     duration:600
 });
-
-animation.create('#slide-2_2 .manBlock',{
-	handler:'#slide-2_2 ul li:nth-of-type(2)',
+animation.create('#slide-2_2 .tween',{
 	properties:{opacity:1},
-	delay:['click'],
+	delay:['click',0],
 	duration:500
 });

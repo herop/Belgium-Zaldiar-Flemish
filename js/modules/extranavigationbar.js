@@ -76,7 +76,24 @@
 		}, false);
 	};
 	function SwipeNavigation(presentation) {
-		var that = this;
+		var that = this, swipeFunctions = {
+				swipeleft: function () {
+					that.leftSwipe();
+					that.hide();
+				},
+				swipeup: function () {
+					that.upSwipe();
+					that.hide();
+				},
+				swiperight: function () {
+					that.rightSwipe();
+					that.hide();	
+				},
+				swipedown: function () {
+					that.downSwipe();
+					that.hide();
+				}
+			}, buttons;
 		this.element = document.createElement('nav');
 		this.presentation = presentation;
 		presentation.collection.forEach(function (chapter) {
@@ -85,22 +102,11 @@
 			}
 		});
 		presentation.element.appendChild(this.element);
-		this.element.addEventListener('swipeleft', function () {
-			that.leftSwipe();
-			that.hide();
-		}, false);
-		this.element.addEventListener('swipeup', function () {
-			that.upSwipe();
-			that.hide();
-		}, false);
-		this.element.addEventListener('swiperight', function () {
-			that.rightSwipe();
-			that.hide();
-		}, false);
-		this.element.addEventListener('swipedown', function () {
-			that.downSwipe();
-			that.hide();
-		}, false);
+		buttons = this.element.querySelectorAll('li');
+		['swipeup', 'swiperight', 'swipedown', 'swipeleft'].forEach(function (event, index) {
+			that.element.addEventListener(event, swipeFunctions[event], false);
+			buttons[index].addEventListener($.events.start, swipeFunctions[event], false);
+		});
 	}
 	SwipeNavigation.prototype.show = function () {
 		if (this.presentation.currentItemIndex === 0 && !backPage) {

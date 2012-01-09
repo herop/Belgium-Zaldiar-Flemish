@@ -1,0 +1,6 @@
+chapter.right { -webkit-transform: translate3d(1024px,0px,0px); }
+chapter.right_anim { -webkit-transform: translate3d(1024px,0px,0px); -webkit-transition: all 400ms ease-out; }
+chapter.left { -webkit-transform: translate3d(-1024px,0px,0px); }
+chapter.left_anim { -webkit-transform: translate3d(-1024px,0px,0px); -webkit-transition: all 400ms ease-out; }
+chapter.center { -webkit-transform: translate3d(0px,0px,0px); -webkit-transition: all 400ms ease-out; }
+

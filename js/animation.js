@@ -87,7 +87,7 @@ animation.create('#slide-1_1 p',{
 animation.create('#slide-1_2 .tween',{
     properties:{opacity:1},
     delay:[800],
-	queue:[0,2,3,1],
+	queue:[0,2,1],
     duration:600
 });
 animation.create('#slide-2_2 .tween',{

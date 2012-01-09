@@ -14,5 +14,5 @@ animation.create('#slide50 .graph .gray-lines, #slide50 .graph .yellow-line, #sl
 	delay:['click', 0, 0],
 	queue:[1, 0, 2],
 	duration:1000,
-	waitfor: 'eventSlide50FirstClick'
+    waitfor: 'eventSlide50FirstClick'
 });

@@ -1,3 +1,10 @@
+@-webkit-keyframes loops {
+    0% {-webkit-opacity:0 ;}
+    40% {-webkit-opacity:0 ;}
+    60% {-webkit-opacity:1 ;}	
+    90% {-webkit-opacity:1 ;}	
+    90% {-webkit-opacity:0 ;}	
+}
 #up footer bar { background-position: 0px -152px; }
 #down footer bar { background-position: 0px -76px; }
 #left footer bar { background-position: 0px -114px; }

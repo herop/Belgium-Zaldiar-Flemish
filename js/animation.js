@@ -43,16 +43,11 @@ animation.create('#yellow_3 .animation-block .tablet60',{
 		duration:250,
 		dispatch:'eventManFliedSlide3H2',
 		waitfor:'eventManFliedSlide3'});
-animation.create('#yellow_3 h2',{
+/*animation.create('#yellow_3 h2',{
 		properties:{opacity:1},
 		delay:[400],
 		duration:200,
-		waitfor:'eventManFliedSlide3H2'});
-animation.create('#yellow_3 .arrows',{
-		properties:{opacity:1},
-		delay:[550],
-		duration:200,
-		waitfor:'eventManFliedSlide3H2'});
+		waitfor:'eventManFliedSlide3H2'});*/
 animation.create('#slide3_2 ul li',{
 	properties:{opacity:1},
 	delay:[400],
@@ -61,7 +56,7 @@ animation.create('#slide3_2 ul li',{
 animation.create('#slide3_3 .tweener',{
 	properties:{opacity:1},
 	delay:[800],
-	queue:[0,2,3,1],
+	queue:[0,2,1],
 	duration:600
 });
 animation.create('#slide30 ul li',{

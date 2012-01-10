@@ -99,6 +99,12 @@ animation.create('#slide-1_2 .yellowRect',{
     duration:500
 });
 
+animation.create('#up_3 .resume',{
+	properties:{opacity:1},
+	delay:['click'],
+	duration:1000
+});
+
 animation.create('#slide-2_2 .manBlock',{
 	handler:'#slide-2_2 ul li:nth-of-type(2)',
 	properties:{opacity:1},

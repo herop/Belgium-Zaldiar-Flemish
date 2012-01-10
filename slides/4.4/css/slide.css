@@ -128,3 +128,26 @@ bottom: 14px;
 	top:-6px;
 	background:#1a171b
 }
+
+#up_4 header.resume{
+	background: #EC7404;
+	border-radius: 10px;
+	padding: 13px 35px;
+	color: white;
+	font-family: Eurostile;
+	font-weight: bold;
+	text-align: center;
+	font-size: 22px;
+	-webkit-box-shadow: rgba(0,0,0,0.25) 5px 5px 10px;
+	margin-left: -42px;
+	width: 577px;
+}
+
+#up_4 section{
+	border: 2px solid transparent;
+}
+
+#up_4 graph{
+	margin-top:25px;
+}
+

@@ -21,7 +21,7 @@
     position: absolute;
     top: 100px;
     left: 430px;
-	-webkit-transform:translate3d(0,0,0);
+	-webkit-transform: translate3d(0px, 0px, 0px);
 }
 
 #slide-1_2 .tab60{
@@ -60,14 +60,4 @@
     font-weight: bold;
     color:#434343;
     margin-top:50px;
-}
-
-#slide-1_2 .bottomRect{
-    margin-left: 270px;
-    margin-top:20px;
-    width:190px;
-    height: 75px;
-    -webkit-box-shadow:1px 1px 5px 1px #ccc;
-    -webkit-border-radius:10px;
-    background: url('../img/bottom-rect.png') 20px 1px no-repeat,rgba(255,255,255,0.5);
 }

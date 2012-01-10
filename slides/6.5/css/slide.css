@@ -1,4 +1,4 @@
-#altijdTable { margin: 270px 70px; }
+#altijdTable {margin:170px 70px; }
 #altijdTable table { margin-top: 20px; width: 635px; border: 2px solid #ec7404; border-radius: 20px; font-family: EurostileDemiOblique; }
 #altijdTable table td { text-align: center; border: 1px solid #ec7404; width: 200px; height: 85px; }
 #altijdTable table tr:first-child td:first-child { background: #ec7404; color: white; border-radius: 15px 0px 0px 0px; font-size: 20px; }

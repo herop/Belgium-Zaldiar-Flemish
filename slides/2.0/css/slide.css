@@ -1,5 +1,5 @@
 #yellow_0 .logo{background: url('../img/logo.png') top center no-repeat;margin: 40px auto 100px;text-align: left;color: #000000;font: 18px Frutiger;padding: 120px 189px 0;}
-#yellow_0 .flyman-block{position: relative;height: 671px;background:transparent;z-index: 3;}
-#yellow_0 .flyman-block .manFleing{position: absolute;height: 511px; width:672px; background: url('../img/flyman.png') top center no-repeat;z-index: 5;top:0;right:0;-webkit-transform: translate3d(-750px,375px,50px);}
+#yellow_0 .flyman-block{position: relative;height: 671px;background:transparent;z-index: 3;-webkit-transform: translate3d(-750px,375px,50px);}
+#yellow_0 .flyman-block .manFleing{position: absolute;height: 511px; width:672px; background: url('../img/flyman.png') top center no-repeat;z-index: 5;top:0;right:0;}
 #yellow_0 .flyman-block .manLines{position: absolute;height:473px; width:456px; background: url('../img/line.png') top center no-repeat;z-index: 4;left: 0;bottom: 0;}
 #yellow_0 h2{color: #000000;font: bold 32px EurostileDemiOblique;text-align: center;margin-top:-70px;z-index: 6;position:relative;}

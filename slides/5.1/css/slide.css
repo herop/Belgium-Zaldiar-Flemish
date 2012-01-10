@@ -1,51 +1,37 @@
 #slide-5_1 table {
+	margin:0 auto;
     margin-top:120px;
-    width:768px;
+    width:700px;
+	height:320px;
+	border:2px solid #ed7403;
+	border-radius: 15px;
 }
 
-#slide-5_1 table thead{
-    position: relative;
-    z-index: 1;
-}
-#slide-5_1 table thead tr:first-child td { vertical-align: top; }
-#slide-5_1 table thead td{
-     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ed7403), color-stop(100%,#f18e32));
-     color:#fff;
-     text-align:center;
-     height: 100px;
-     padding-top: 20px;
-     font-size:16px;
-     font-family: Frutiger;
-     font-weight: bold;
-     text-shadow: -1px 0 3px #A4490B,1px 0px 3px #A4490B,0 -1px 3px #A4490B,0 1px 3px #A4490B;
- }
-
-#slide-5_1 table thead, #slide-5_1 table tbody {
-    -webkit-box-shadow: 0px 10px 10px 0px rgba(64,64,64,0.4);
-    display: block;
+#slide-5_1 table thead tr td {
+	vertical-align: middle;
+	color:#000;
+	font-family: 'Frutiger';
+	font-size:12px;
+	font-weight: bold;
+	text-align: center;
 }
 
-#slide-5_1 table tbody{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff6e4), color-stop(100%,#fffffe));
+#slide-5_1 table thead td, #slide-5_1 table tbody td{
+	border-bottom:1px solid #ed7403;
+	width: 175px;
+	height:80px;
 }
 
-#slide-5_1 table thead td span{
-    color:#fff;
-    font-size:12px;
-    font-family: Frutiger;
-    font-weight: bold;
-}
-#slide-5_1 table thead td,#slide-5_1 table tbody td{
-    width: 192px;
+#slide-5_1 table tbody tr:last-of-type td{
+	border-bottom:1px solid transparent;
 }
 
-#slide-5_1 table tbody,#slide-5_1 table thead{
-    width: 768px;
+#slide-5_1 table td{
+	border-right: 1px solid #f7cea5;
 }
 
-#slide-5_1 table tbody td{
-    border-bottom:1px solid #b6ae9f;
-    height:120px;
+#slide-5_1 table td:last-of-type{
+	border-right: 1px solid transparent;
 }
 
 #slide-5_1 table tbody tr td:nth-of-type(1){
@@ -57,12 +43,12 @@
 
 #slide-5_1 input[type="checkbox"]{
     -webkit-appearance:none;
-    width: 192px;
+    width: 175px;
     height: 85px;
 	pointer-events:none;
 	border:none;
 }
 
 #slide-5_1 input[type="checkbox"]:checked{
-    background: url('../img/checkbox.png') 75px 18px no-repeat;
+    background: url('../img/checkbox.png') 70px 18px no-repeat;
 }

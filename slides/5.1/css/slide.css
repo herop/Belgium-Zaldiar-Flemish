@@ -7,7 +7,7 @@
     position: relative;
     z-index: 1;
 }
-
+#slide-5_1 table thead tr:first-child td { vertical-align: top; }
 #slide-5_1 table thead td{
      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ed7403), color-stop(100%,#f18e32));
      color:#fff;

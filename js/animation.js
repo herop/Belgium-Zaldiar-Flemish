@@ -92,7 +92,7 @@ animation.create('#slide-2_2 .tween',{
 });
 animation.create('#meerPijnverlichtingBijPatientenMetPijn bar',{
 	properties:{height:'attr'},
-	delay:[0, 800],
+	delay:[0],
 	duration:800,
 	dispatch:'meerPijnverlichtingBijPatientenMetPijn'}
 );

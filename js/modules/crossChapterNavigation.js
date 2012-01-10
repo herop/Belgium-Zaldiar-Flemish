@@ -40,7 +40,10 @@
 						currSlide.element.addClass("right_anim");
 						prevSlide.element.addClass("center");
 						currSlide.element.addEventListener('webkitTransitionEnd', removeClasses);
+					} else {
+						that.inaction = false;	
 					}
+					
 				}
 			}, this);
 		}, this);

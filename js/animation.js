@@ -85,6 +85,30 @@ animation.create('#slide-1_2 .tween',{
 	queue:[0,2,1],
     duration:600
 });
+animation.create('#slide-1_2 .tab60',{
+    properties:{opacity:1},
+    delay:[500],
+    duration:500
+});
+animation.create('#slide-1_2 .tab20',{
+    properties:{opacity:1},
+    delay:[1000],
+    duration:500
+});
+animation.create('#slide-1_2 .yellowRect',{
+    properties:{opacity:1},
+    delay:[1500],
+    duration:500
+});
+
+animation.create('#up_3 .resume',{
+	properties:{opacity:1},
+	delay:['click'],
+	duration:1000
+});
+
+animation.create('#slide-2_2 .manBlock',{
+	handler:'#slide-2_2 ul li:nth-of-type(2)',
 animation.create('#slide-2_2 .tween',{
 	properties:{opacity:1},
 	delay:['click',0],

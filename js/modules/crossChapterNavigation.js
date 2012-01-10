@@ -50,6 +50,7 @@
 					that.inaction = true;
 					var currSlide = that.presentation.collection[that.presentation.currentItemIndex],
 						nextSlide = that.presentation.collection[that.presentation.currentItemIndex + 1],
+						canGoToTheNextSlide = nextSlide.element.getAttribute('role') !== 'ref-popup',
 						removeClasses = function () {
 							that.inaction = false;
 							if (that.menu) {
@@ -61,7 +62,7 @@
 							that.presentation.selectItem('next');
 							currSlide.element.removeEventListener('webkitTransitionEnd', removeClasses);
 						};
-					if (that.presentation.currentItemIndex < that.presentation.collection.length - 1) {
+					if (that.presentation.currentItemIndex < that.presentation.collection.length - 1 && canGoToTheNextSlide) {
 						if (that.menu) {
 							that.menu.deactivize();
 						}
@@ -70,6 +71,8 @@
 						currSlide.element.addClass("left_anim");
 						that.presentation.collection[that.presentation.currentItemIndex + 1].element.addClass("center");
 						currSlide.element.addEventListener('webkitTransitionEnd', removeClasses);
+					} else {
+						that.inaction = false;	
 					}
 				}
 			}, this);
